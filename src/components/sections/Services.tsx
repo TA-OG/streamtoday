@@ -116,7 +116,7 @@ export function Services() {
                     <Image src="/images/green-room-3.jpg" alt="Studio Entrance" fill className="object-cover" />
                  </div>
                  <div className="relative h-full">
-                    <Image src="/images/green-room-4.jpg" alt="Fireplace Detail" fill className="object-cover" />
+                    <Image src="/images/green-room-3.jpg" alt="Fireplace Detail" fill className="object-cover" style={{objectPosition: 'center right'}} />
                  </div>
             </div>
         </div>
