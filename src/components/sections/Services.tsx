@@ -1,4 +1,4 @@
-import { Mic, Video, Sparkles, Users, Clapperboard, Radio, Coffee } from "lucide-react";
+import { Mic, Video, Users, Clapperboard, Radio, Coffee } from "lucide-react";
 import Image from "next/image";
 
 const services = [
