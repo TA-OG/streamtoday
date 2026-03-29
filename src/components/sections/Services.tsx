@@ -1,24 +1,24 @@
-import { Mic, Video, Users, Clapperboard, Radio, Coffee } from "lucide-react";
+import { Mic, Video, Users, Radio, Coffee, Scissors } from "lucide-react";
 import Image from "next/image";
 
 const services = [
   {
     icon: Mic,
     title: "Podcast Recording",
-    description: "Professional audio capture with industry-standard mics and acoustic treatment. Multi-track recording for up to 4 guests.",
-    features: ["4K video optional", "Remote guest integration", "Same-day raw files"],
+    description: "Professional audio capture with Rode PodMic and acoustic treatment. Multi-track recording for up to 4 guests in The Cave, 8 in Studio One.",
+    features: ["Broadcast video optional", "Remote guest integration", "Same-day raw files"],
   },
   {
     icon: Video,
     title: "Video Content",
-    description: "YouTube-ready productions, social clips, and branded content. Shot on cinema-grade cameras with professional lighting.",
+    description: "YouTube-ready productions, social clips, and branded content. Shot on Panasonic broadcast cameras with professional lighting.",
     features: ["Multi-camera setups", "Professional lighting", "Color grading included"],
   },
   {
-    icon: Clapperboard,
-    title: "Social Media Packages",
-    description: "Batch-shoot a month of content in one session. Vertical video optimised for TikTok, Instagram Reels, and Shorts.",
-    features: ["Vertical + horizontal", "Trending audio licensing", "Caption templates"],
+    icon: Scissors,
+    title: "LIVE EDITING",
+    description: "Our unique USP. Real-time editing while you record. Your content is cut, polished and ready as you finish the session.",
+    features: ["Real-time cuts", "Instant feedback", "Leave with edited content"],
   },
   {
     icon: Users,
@@ -53,7 +53,8 @@ export function Services() {
             Everything you need to create.
           </h2>
           <p className="text-xl text-gray-600 leading-relaxed">
-            From podcast recording to full video production. One studio, every format, professional results every time.
+            From podcast recording to full video production. Two studios, every format, professional results every time. 
+            Plus our unique LIVE EDITING while you record.
           </p>
         </div>
 

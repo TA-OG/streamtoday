@@ -9,12 +9,14 @@ const plans = [
     features: [
       "2 hours studio time",
       "Up to 2 people on camera",
-      "4K video + pro audio",
+      "Broadcast video + pro audio",
+      "Professional lighting",
+      "Remote callers (Zoom/Google Meet/Riverside etc)",
       "Raw files within 24 hours",
       "Basic colour correction",
     ],
     cta: "Book Single Session",
-    href: "/book?plan=single",
+    href: "https://streamtoday.as.me/?appointmentType=42416301",
     popular: false,
   },
   {
@@ -25,13 +27,15 @@ const plans = [
     features: [
       "4 sessions per month",
       "Up to 3 people on camera",
-      "4K video + pro audio",
+      "Broadcast video + pro audio",
+      "Professional lighting",
+      "Remote callers integrated",
       "Edited deliverables",
       "Social media clips included",
       "Priority booking",
     ],
     cta: "Start Content Package",
-    href: "/book?plan=package",
+    href: "https://streamtoday.as.me/?appointmentType=42416302",
     popular: true,
   },
   {
@@ -48,7 +52,7 @@ const plans = [
       "Archive & asset management",
     ],
     cta: "Get Retainer",
-    href: "/book?plan=retainer",
+    href: "https://streamtoday.as.me/?appointmentType=42416303",
     popular: false,
   },
 ];
@@ -56,13 +60,13 @@ const plans = [
 export function Pricing() {
   return (
     <section id="pricing" className="py-24 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto section-padding">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="heading-lg mb-6">Simple pricing. No surprises.</h2>
-          <p className="body-lg">
+          <h2 className="text-4xl lg:text-5xl font-black text-black mb-6">Simple pricing. No surprises.</h2>
+          <p className="text-xl text-gray-600">
             Choose the plan that fits your content goals. All plans include full access 
-            to our professional studio and equipment.
+            to our professional studio, equipment, and LIVE EDITING.
           </p>
         </div>
 
@@ -106,8 +110,10 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Link
+              <a
                 href={plan.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block text-center py-4 font-semibold transition-colors ${
                   plan.popular
                     ? "bg-black text-white hover:bg-gray-800"
@@ -115,7 +121,7 @@ export function Pricing() {
                 }`}
               >
                 {plan.cta}
-              </Link>
+              </a>
             </div>
           ))}
         </div>

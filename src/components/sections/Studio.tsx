@@ -2,22 +2,24 @@ import Image from 'next/image';
 
 const features = [
   {
-    title: "4K Cinema Cameras",
-    description: "Sony FX6 and Blackmagic Pocket 6K for broadcast-quality video.",
+    title: "Ex-BBC/Sky Broadcast Cameras",
+    description: "Panasonic broadcast cameras as standard. Sony FX6 available as additional hire (POA).",
   },
   {
     title: "Pro Audio Chain",
-    description: "Shure SM7B mics, SSL mixing, and acoustic-treated space.",
+    description: "Digital mixer with live processing for that big radio sound. Rode PodMic standard, Sennheiser lav wireless mics available. Shure SM7B available as additional hire.",
   },
   {
-    title: "The Cave Studio",
-    description: "An intimate, distinct space with green living walls and industrial brick.",
+    title: "Two Studios",
+    description: "Studio One: large studio with customisable backdrop for up to 8 people. Cave Studio: cosy studio for max 4 people, ideal for 2.",
   },
   {
-    title: "Lace Market Location",
-    description: "20 Fletcher Gate, Nottingham. Tram, train, and parking nearby.",
+    title: "LIVE EDITING",
+    description: "Real-time editing while recordings take place. Your content is cut and polished as you create it.",
   },
 ];
+
+
 
 export function Studio() {
   return (
@@ -30,12 +32,11 @@ export function Studio() {
               The Space
             </span>
             <h2 className="text-4xl lg:text-5xl font-black text-black mb-8 leading-tight">
-              A space built for creators who take their content seriously.
+              Two studios. One mission. Professional content.
             </h2>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-              Located in Nottingham&apos;s historic Lace Market, our studio combines 
-              industrial character with professional-grade equipment. No compromises. 
-              No distractions. Just create.
+              Located in Nottingham&apos;s historic Lace Market. Studio One for larger productions up to 8 people. 
+              The Cave for intimate sessions up to 4. Both with LIVE EDITING while you record.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-10">
@@ -50,48 +51,48 @@ export function Studio() {
             </div>
           </div>
 
-          {/* Image Grid */}
+          {/* Image Grid - Studio Photos */}
           <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-                  src="/images/cave-studio.png" 
-                  alt="The Cave Studio Nottingham" 
+                  src="/images/studio-hero-1.jpg" 
+                  alt="Studio One" 
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
-                  <span className="text-white font-bold text-sm uppercase tracking-widest">The Cave Studio</span>
+                  <span className="text-white font-bold text-sm uppercase tracking-widest">Studio One</span>
                 </div>
               </div>
-              <div className="aspect-square relative rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition-all duration-500">
+              <div className="aspect-square relative rounded-2xl overflow-hidden shadow-xl">
                 <Image 
-                  src="/images/hero-dark.jpg" 
-                  alt="Professional Recording Equipment" 
+                  src="/images/studio-hero-2.jpg" 
+                  alt="Studio Equipment" 
                   fill
                   className="object-cover"
                 />
               </div>
             </div>
             <div className="space-y-4 pt-12">
-              <div className="aspect-square relative rounded-2xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition-all duration-500">
+              <div className="aspect-square relative rounded-2xl overflow-hidden shadow-xl">
                 <Image 
-                  src="/images/logo-wide.jpg" 
-                  alt="Studio Environment" 
+                  src="/images/cave-studio.png" 
+                  alt="The Cave Studio" 
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                  <span className="text-white font-bold text-sm uppercase tracking-widest">The Cave</span>
+                </div>
               </div>
               <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl">
-                <div className="w-full h-full bg-red-600 flex items-center justify-center p-8">
-                   <Image 
-                    src="/images/logo-sq-transparent.png" 
-                    alt="StreamToday Logo" 
-                    width={150}
-                    height={150}
-                    className="object-contain brightness-0 invert"
-                  />
-                </div>
+                <Image 
+                  src="/images/green-room-1.jpg" 
+                  alt="Green Room" 
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
