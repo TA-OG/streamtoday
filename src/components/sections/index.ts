@@ -1,0 +1,10 @@
+export { Navigation } from "./Navigation";
+export { Hero } from "./Hero";
+export { SocialProof } from "./SocialProof";
+export { Services } from "./Services";
+export { Studio } from "./Studio";
+export { Pricing } from "./Pricing";
+export { LeadMagnet } from "./LeadMagnet";
+export { FAQ } from "./FAQ";
+export { CTA } from "./CTA";
+export { Footer } from "./Footer";
