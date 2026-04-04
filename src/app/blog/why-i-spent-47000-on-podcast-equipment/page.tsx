@@ -82,8 +82,8 @@ export default function BlogPost() {
         {/* Hero Image */}
         <div className="relative w-full aspect-[16/9] mb-12 rounded-2xl overflow-hidden bg-gray-900">
           <Image
-            src="/images/studio-hero-1.jpg"
-            alt="Professional podcast studio with microphones and mixing equipment"
+            src="https://images.unsplash.com/photo-1478737270239-2f02b77ac6d5?q=80&w=2066&auto=format&fit=crop"
+            alt="Close-up of professional podcast microphone"
             fill
             className="object-cover"
             priority
