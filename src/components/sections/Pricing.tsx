@@ -17,7 +17,7 @@ const plans = [
       "Perfect for 1-on-1 interviews",
     ],
     cta: "Book Cave Studio",
-    href: "https://streamtoday.as.me/?appointmentType=42416301",
+    href: "https://streamtoday.as.me/",
     popular: false,
   },
   {
@@ -35,7 +35,7 @@ const plans = [
       "Ideal for panels & groups",
     ],
     cta: "Book Studio One",
-    href: "https://streamtoday.as.me/?appointmentType=42416302",
+    href: "https://streamtoday.as.me/",
     popular: true,
   },
   {
@@ -53,7 +53,7 @@ const plans = [
       "Archive & asset management",
     ],
     cta: "Start Subscription",
-    href: "https://streamtoday.as.me/?appointmentType=42416303",
+    href: "https://streamtoday.as.me/",
     popular: false,
   },
 ];
