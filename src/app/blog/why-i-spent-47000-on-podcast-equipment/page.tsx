@@ -308,12 +308,7 @@ export default function BlogPost() {
             What I Learned (So You Don't Have To)
           </h2>
 
-          <div className="bg-gray-900 rounded-xl p-8 mb-8 border border-gray-800">
-            <h3 className="text-2xl font-bold mb-6 text-white">The Calm Authority Statement</h3>
-            <p className="text-xl text-gray-300 leading-relaxed">
-              The most expensive podcast studio is the one you build yourself and never use. The cheapest is the one you hire, walk out of with finished content, and never think about again until your next session.
-            </p>
-          </div>
+
 
           <p className="mb-6">
             If you're serious about podcasting, here's my recommendation:
