@@ -29,7 +29,7 @@ export function Hero() {
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
+          <h1 className="text-[3.6rem] md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
             YOUR BRAND,<br />
             <span className="text-red-600">BROADCAST</span> READY.
           </h1>

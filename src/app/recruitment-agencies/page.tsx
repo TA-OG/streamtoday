@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Check, Mic, Video, Users, Clock, TrendingUp } from "lucide-react";
+import { Check, Video, Users, Clock, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Podcast Studio for Recruitment Agencies Nottingham | StreamTODAY",

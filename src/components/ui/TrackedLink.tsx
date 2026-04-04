@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import posthog from "posthog-js";
 
@@ -14,8 +13,6 @@ interface TrackedLinkProps {
 }
 
 export function TrackedLink({ href, children, campaign, className, target, rel }: TrackedLinkProps) {
-  const [isExiting, setIsExiting] = useState(false);
-
   const handleClick = () => {
     posthog.capture("button_click", {
       button_name: "book_now",

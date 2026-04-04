@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Check, Mic, FlaskConical, TrendingUp, Users, Clock } from "lucide-react";
+import { Check, FlaskConical, TrendingUp, Users, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Podcast Studio for Life Sciences Nottingham | StreamTODAY",
