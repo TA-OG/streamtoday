@@ -82,8 +82,8 @@ export default function BlogPost() {
         {/* Hero Image */}
         <div className="relative w-full aspect-[16/9] mb-12 rounded-2xl overflow-hidden bg-gray-900">
           <Image
-            src="https://images.unsplash.com/photo-1478737270239-2f02b77ac6d5?q=80&w=2066&auto=format&fit=crop"
-            alt="Close-up of professional podcast microphone"
+            src="/images/blog-clutter-hero.png"
+            alt="A cluttered home office desk representing a failed home studio"
             fill
             className="object-cover"
             priority

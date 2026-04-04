@@ -80,8 +80,8 @@ export default function BlogPost() {
         {/* Hero Image */}
         <div className="relative w-full aspect-[16/9] mb-12 rounded-2xl overflow-hidden bg-gray-900">
           <Image
-            src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=2070&auto=format&fit=crop"
-            alt="Professional podcast studio with live editing equipment"
+            src="/images/blog-switcher-hero.png"
+            alt="High-tech video switcher in a podcast control room"
             fill
             className="object-cover"
             priority

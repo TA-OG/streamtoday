@@ -1,40 +1,135 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { Calendar, Clock, User, Share2, Bookmark, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "How to Start a Podcast in Nottingham: Complete 2024 Guide | StreamTODAY Studios",
   description: "Everything you need to know to start a podcast in Nottingham, from equipment anxiety to your first 1,000 downloads. A practical, step-by-step guide.",
+  openGraph: {
+    title: "How to Start a Podcast in Nottingham",
+    description: "Everything you need to know from equipment anxiety to your first 1,000 downloads.",
+    type: "article",
+    publishedTime: "2024-03-29T00:00:00Z",
+    authors: ["StreamToday Studios"],
+    tags: ["beginner guide", "Nottingham", "podcasting 2026", "start a podcast"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Start a Podcast in Nottingham",
+    description: "The complete 2026 guide from zero to published.",
+  },
 };
+
+const tableOfContents = [
+  { id: "foundation", title: "Phase 1: The Foundation" },
+  { id: "equipment", title: "Phase 2: Equipment & Environment" },
+  { id: "format", title: "Phase 3: Format & Recording" },
+  { id: "publishing", title: "Phase 4: Publishing & Growth" },
+  { id: "local", title: "The Nottingham Advantage" },
+];
 
 export default function BlogPost() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="mb-8">
-          <Link href="/blog" className="text-red-500 hover:text-red-400">
-            ← Back to blog
-          </Link>
-        </div>
-        
+      {/* Progress Bar */}
+      <div className="fixed top-0 left-0 right-0 h-1 bg-gray-800 z-50">
+        <div className="h-full bg-red-600 w-0" id="reading-progress" />
+      </div>
+
+      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Breadcrumbs */}
+        <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8" aria-label="Breadcrumb">
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <ChevronRight className="w-4 h-4" />
+          <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+          <ChevronRight className="w-4 h-4" />
+          <span className="text-white">Beginner Guide</span>
+        </nav>
+
+        {/* Header */}
         <header className="mb-12">
-          <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-            <span className="text-red-500">Beginner Guide</span>
-            <span>•</span>
-            <span>March 29, 2024</span>
-            <span>•</span>
-            <span>17 min read</span>
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-6">
+            <span className="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+              Beginner Guide
+            </span>
+            <div className="flex items-center gap-2">
+              <Calendar className="w-4 h-4" />
+              <time dateTime="2024-03-29">March 29, 2024</time>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4" />
+              <span>17 min read</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <User className="w-4 h-4" />
+              <span>StreamToday Studios</span>
+            </div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             How to Start a Podcast in Nottingham: The Complete 2024 Guide
           </h1>
-          <p className="text-xl text-gray-400 italic">
+
+          <p className="text-xl md:text-2xl text-gray-400 italic leading-relaxed max-w-3xl">
             Everything you need to know, from equipment anxiety to your first 1,000 downloads
           </p>
         </header>
 
-        <div className="prose prose-invert prose-lg max-w-none">
-          <p className="lead">
+        {/* Hero Image */}
+        <div className="relative w-full aspect-[16/9] mb-12 rounded-2xl overflow-hidden bg-gray-900">
+          <Image
+            src="/images/blog-nottingham-hero.png"
+            alt="Podcast microphone silhouetted against the Nottingham Lace Market"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+          <div className="absolute bottom-6 left-6 right-6">
+            <p className="text-sm text-gray-300">
+              Start your Nottingham podcasting journey with professional guidance.
+            </p>
+          </div>
+        </div>
+
+        {/* Table of Contents */}
+        <div className="bg-gray-900 rounded-xl p-6 mb-12 border border-gray-800">
+          <h2 className="text-lg font-semibold mb-4 text-white">Table of Contents</h2>
+          <ul className="space-y-2">
+            {tableOfContents.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={`#${item.id}`}
+                  className="text-gray-400 hover:text-red-500 transition-colors flex items-center gap-2"
+                >
+                  <span className="w-6 h-6 rounded-full bg-gray-800 flex items-center justify-center text-xs">
+                    {tableOfContents.indexOf(item) + 1}
+                  </span>
+                  {item.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="prose prose-lg prose-invert max-w-none">
+          <p className="lead text-xl text-gray-300 leading-relaxed mb-8">
             So you want to start a podcast in Nottingham. Congratulations. You've chosen a medium that's growing, engaging, and (contrary to popular belief) not actually that difficult to break into. You've also chosen a city that's perfectly positioned for podcasting success: big enough to have stories worth telling, small enough that you can actually get access to the people telling them.
+          </p>
+
+          <p className="mb-6">
+            This guide will take you from zero to published podcast. Not in the vague "follow your dreams" sense, but in the practical "do these specific things in this specific order" sense. By the end, you'll have a podcast that exists, sounds professional, and has a plausible path to finding an audience.
+          </p>
+
+          <h2 id="foundation" className="text-3xl md:text-4xl font-bold text-white mt-16 mb-6">
+            Phase 1: The Foundation (Before You Spend Any Money)
+          </h2>
+
+          <h3 className="text-2xl font-bold text-white mt-10 mb-4">Step 1: Define Your Podcast (The Most Important Step)</h3>
+
+          <p className="mb-6">
+            Most podcast failures happen before recording starts. They happen because the podcaster never answered three fundamental questions:
           </p>
 
           <p>
