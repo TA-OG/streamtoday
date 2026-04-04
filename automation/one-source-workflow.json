@@ -1,0 +1,129 @@
+{
+  "name": "StreamToday One-Source Social Distributor",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "streamtoday-upload",
+        "options": {}
+      },
+      "id": "webhook-trigger",
+      "name": "Video Upload Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "channelId": {
+          "__rl": true,
+          "value": "UCxxxxxxxxxxxxxxxxxxx",
+          "mode": "list",
+          "cachedResultName": "StreamToday Studios"
+        },
+        "videoType": "shorts",
+        "snippet": {
+          "title": "={{ $json.body.title }}",
+          "description": "={{ $json.body.description }} #Shorts #Nottingham #Podcast"
+        },
+        "options": {}
+      },
+      "id": "youtube-upload",
+      "name": "Upload to YouTube Shorts",
+      "type": "n8n-nodes-base.youTube",
+      "typeVersion": 1,
+      "position": [
+        500,
+        150
+      ],
+      "credentials": {
+        "youTubeOAuth2Api": {
+          "id": "youtube-creds",
+          "name": "YouTube OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "containerType": "REELS",
+        "mediaUrl": "={{ $json.body.videoUrl }}",
+        "caption": "={{ $json.body.description }}",
+        "options": {}
+      },
+      "id": "instagram-upload",
+      "name": "Upload to Instagram Reels",
+      "type": "n8n-nodes-base.instagram",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "instagramOAuth2Api": {
+          "id": "instagram-creds",
+          "name": "Instagram Graph API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "videoUrl": "={{ $json.body.videoUrl }}",
+        "title": "={{ $json.body.title }}",
+        "description": "={{ $json.body.description }}",
+        "options": {}
+      },
+      "id": "tiktok-upload",
+      "name": "Upload to TikTok",
+      "type": "n8n-nodes-base.tikTok",
+      "typeVersion": 1,
+      "position": [
+        500,
+        450
+      ],
+      "credentials": {
+        "tikTokOAuth2Api": {
+          "id": "tiktok-creds",
+          "name": "TikTok Developer API"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Video Upload Webhook": {
+      "main": [
+        [
+          {
+            "node": "Upload to YouTube Shorts",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Upload to Instagram Reels",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Upload to TikTok",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": {
+    "instanceId": "streamtoday-automation"
+  },
+  "pinData": {},
+  "versionId": "1",
+  "tags": []
+}

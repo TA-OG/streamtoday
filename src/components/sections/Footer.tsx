@@ -93,8 +93,8 @@ export function Footer() {
                 </a>
               </p>
               <p>
-                <a href="tel:+441158241234" className="hover:text-white transition-colors">
-                  0115 824 1234
+                <a href="https://wa.me/447763741309" className="hover:text-white transition-colors">
+                  WhatsApp: +44 7763 741309
                 </a>
               </p>
             </address>
