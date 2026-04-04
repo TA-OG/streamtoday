@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 
 const plans = [
   {
@@ -111,8 +112,9 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <a
+              <TrackedLink
                 href={plan.href}
+                campaign={`pricing_${plan.name.toLowerCase().replace(/\s+/g, '_')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`block text-center py-4 font-semibold transition-colors ${
@@ -122,7 +124,7 @@ export function Pricing() {
                 }`}
               >
                 {plan.cta}
-              </a>
+              </TrackedLink>
             </div>
           ))}
         </div>
