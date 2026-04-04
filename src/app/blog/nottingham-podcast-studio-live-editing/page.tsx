@@ -170,7 +170,7 @@ export default function BlogPost() {
             <ul className="list-none space-y-2 text-gray-300">
               <li>Total time from recording to publication: 5-10 days</li>
               <li>Total mental overhead: Significant</li>
-              <li>Total enthusiasm remaining: Depleted</li>
+              <li>Total enthusiasm remaining: DEAD!</li>
             </ul>
           </div>
 
