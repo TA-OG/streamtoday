@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Calendar, Clock, User, Share2, Bookmark, ChevronRight } from "lucide-react";
+import { Calendar, Clock, User, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "How to Start a Podcast in Nottingham: Complete 2024 Guide | StreamTODAY Studios",
