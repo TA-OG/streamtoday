@@ -15,47 +15,46 @@ const plans = [
       "Remote guest integration",
       "LIVE EDITING while you record",
       "Raw files within 24 hours",
-      "Perfect for 1-on-1 interviews",
     ],
     cta: "Book Cave Studio",
     href: "https://streamtoday.as.me/",
     popular: false,
   },
   {
-    name: "Studio One",
-    price: "75",
-    period: "/hour",
-    description: "Our flagship studio. Fits up to 8 people on raised stage.",
+    name: "Content Retainer",
+    price: "549",
+    period: "/month",
+    description: "The professional's choice. Consistent, high-quality output.",
     features: [
-      "Raised stage for up to 8 people",
-      "Customisable backdrop",
-      "Multi-camera Panasonic broadcast",
-      "Professional lighting rig",
-      "LIVE EDITING while you record",
-      "Green room & VIP hospitality",
-      "Ideal for panels & groups",
+      "3 sessions per month",
+      "Full post-production & editing",
+      "6 social media clips (Reels/Shorts)",
+      "Custom branded backgrounds",
+      "Dedicated account manager",
+      "48-hour turnaround guaranteed",
     ],
-    cta: "Book Studio One",
+    cta: "Start Retainer",
     href: "https://streamtoday.as.me/",
     popular: true,
   },
   {
-    name: "Podcast Subscription",
-    price: "549",
+    name: "Founder's Circle",
+    price: "999",
     period: "/month",
-    description: "Best rates for regular creators. Custom backgrounds & priority booking.",
+    description: "The High-Impact Content Engine. A producer, a researcher, and total feed dominance.",
     features: [
-      "3 sessions per month",
-      "Custom branded backgrounds",
-      "Full post-production included",
-      "6 social media clips per month",
-      "Dedicated account manager",
-      "48-hour turnaround guaranteed",
-      "Archive & asset management",
+      "3 sessions per month (Studio One or Cave)",
+      "Dedicated Producer & Researcher",
+      "Post-management & scheduling",
+      "Long-form to short-form waterfall",
+      "Sub-60s Reels, Shorts & TikToks",
+      "Community engagement & tagging",
+      "Priority 'Red Phone' support",
     ],
-    cta: "Start Subscription",
+    cta: "Join the Circle (3 Spots)",
     href: "https://streamtoday.as.me/",
     popular: false,
+    highlight: true,
   },
 ];
 
@@ -79,7 +78,9 @@ export function Pricing() {
               key={plan.name}
               className={`relative p-8 border-2 ${
                 plan.popular
-                  ? "border-black"
+                  ? "border-black shadow-xl"
+                  : plan.highlight
+                  ? "border-red-600 bg-gray-50"
                   : "border-gray-200"
               }`}
             >
@@ -87,6 +88,13 @@ export function Pricing() {
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-black text-white px-4 py-1 text-sm font-medium">
                     Most Popular
+                  </span>
+                </div>
+              )}
+              {plan.highlight && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <span className="bg-red-600 text-white px-4 py-1 text-sm font-medium">
+                    High-Impact Engine
                   </span>
                 </div>
               )}
