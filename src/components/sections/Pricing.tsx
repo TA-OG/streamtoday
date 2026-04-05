@@ -38,7 +38,7 @@ const plans = [
     popular: true,
   },
   {
-    name: "Founder's Circle",
+    name: "The Content Engine",
     price: "999",
     period: "/month",
     description: "The High-Impact Content Engine. A producer, a researcher, and total feed dominance.",
@@ -51,7 +51,7 @@ const plans = [
       "Community engagement & tagging",
       "Priority 'Red Phone' support",
     ],
-    cta: "Join the Circle (3 Spots)",
+    cta: "Start The Engine (3 Spots)",
     href: "https://streamtoday.as.me/",
     popular: false,
     highlight: true,
