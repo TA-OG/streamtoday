@@ -8,6 +8,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "best-podcast-studio-nottingham",
+    title: "The Best Podcast Studio in Nottingham (2024 Review)",
+    excerpt: "An honest review of Nottingham's podcast studios. Equipment, acoustics, pricing, and service compared. Plus why some creators travel from Leeds and Birmingham to record here.",
+    date: "2026-04-09",
+    category: "Local SEO",
+    readTime: "12 min read",
+  },
+  {
+    slug: "home-studio-vs-professional-studio-comparison",
+    title: "Home Studio vs Professional Studio: The Real Comparison (2024)",
+    excerpt: "Stop guessing. Here's the honest comparison between building a home podcast studio and hiring a professional space. Spoiler: one option costs more than you think.",
+    date: "2026-04-09",
+    category: "Studio vs DIY",
+    readTime: "16 min read",
+  },
+  {
     slug: "why-i-spent-47000-on-podcast-equipment",
     title: "Why I Spent £47,000 on Podcast Equipment So You Don't Have To",
     excerpt: "The brutal economics of home studios vs professional hire, or: how I learned to stop worrying and love the studio. The most expensive podcast studio is the one you build yourself and never use.",
