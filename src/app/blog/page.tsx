@@ -8,6 +8,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: "how-to-get-first-1000-podcast-listeners",
+    title: "How to Get Your First 1,000 Podcast Listeners (Without Buying Ads)",
+    excerpt: "The uncomfortable truth about podcast growth: most shows never reach 1,000 listeners. Here's the systematic approach that actually works.",
+    date: "2026-04-16",
+    category: "Growth",
+    readTime: "16 min read",
+  },
+  {
+    slug: "the-microphone-myth-why-expensive-gear-wont-save-you",
+    title: "The Microphone Myth: Why Your £500 Mic Sounds Like a £50 Mic",
+    excerpt: "The uncomfortable truth about audio equipment that nobody on YouTube will tell you. Why expensive microphones in bad rooms sound worse than cheap mics in good rooms.",
+    date: "2026-04-16",
+    category: "Equipment",
+    readTime: "8 min read",
+  },
+  {
     slug: "best-podcast-studio-nottingham",
     title: "The Best Podcast Studio in Nottingham (2024 Review)",
     excerpt: "An honest review of Nottingham's podcast studios. Equipment, acoustics, pricing, and service compared. Plus why some creators travel from Leeds and Birmingham to record here.",
