@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "StreamToday Studios | Stop Creating. Start Orchestrating.",
     description: "Professional 4K podcast and video studio in Nottingham. Walk out with finished content.",
-    url: "https://streamtoday.studio",
+    url: "https://streamtoday.co.uk",
     siteName: "StreamToday Studios",
     locale: "en_GB",
     type: "website",
@@ -37,9 +37,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "PodcastStudio",
               "name": "StreamToday Studios",
-              "image": "https://streamtoday.studio/logo.png",
-              "url": "https://streamtoday.studio",
-              "telephone": "+447949462619",
+              "image": "https://streamtoday.co.uk/logo.png",
+              "url": "https://streamtoday.co.uk",
+              "telephone": "+447763741309",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "20 Fletcher Gate",

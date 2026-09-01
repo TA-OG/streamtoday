@@ -60,7 +60,7 @@ export default function PrivacyPage() {
           <p>
             For privacy-related questions, contact us at:
             <br />
-            Email: hello@streamtoday.studio
+            Email: hello@streamtoday.co.uk
             <br />
             Address: 20 Fletcher Gate, Nottingham NG1 2FZ
           </p>
