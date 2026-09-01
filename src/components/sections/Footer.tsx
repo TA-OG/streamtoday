@@ -88,8 +88,8 @@ export function Footer() {
               <p>20 Fletcher Gate</p>
               <p>Nottingham, NG1 2FZ</p>
               <p className="pt-2">
-                <a href="mailto:hello@streamtoday.studio" className="hover:text-white transition-colors">
-                  hello@streamtoday.studio
+                <a href="mailto:hello@streamtoday.co.uk" className="hover:text-white transition-colors">
+                  hello@streamtoday.co.uk
                 </a>
               </p>
               <p>

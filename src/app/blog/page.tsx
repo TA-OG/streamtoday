@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { Navigation } from "@/components/sections/Navigation";
+import { Footer } from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Blog | StreamTODAY Studios",
@@ -67,48 +69,52 @@ const posts = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          StreamTODAY Blog
-        </h1>
-        <p className="text-xl text-gray-400 mb-12 max-w-2xl">
-          Expert podcasting advice, studio tips, and growth strategies. 
-          No fluff. No equipment worship. Just what works.
-        </p>
+    <>
+      <Navigation />
+      <main className="min-h-screen bg-black text-white pt-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            StreamTODAY Blog
+          </h1>
+          <p className="text-xl text-gray-400 mb-12 max-w-2xl">
+            Expert podcasting advice, studio tips, and growth strategies. 
+            No fluff. No equipment worship. Just what works.
+          </p>
 
-        <div className="space-y-8">
-          {posts.map((post) => (
-            <article
-              key={post.slug}
-              className="border border-gray-800 rounded-lg p-6 hover:border-red-600 transition-colors"
-            >
-              <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                <span className="text-red-500">{post.category}</span>
-                <span>•</span>
-                <span>{post.date}</span>
-                <span>•</span>
-                <span>{post.readTime}</span>
-              </div>
-              <h2 className="text-2xl font-bold text-white mb-3">
+          <div className="space-y-8">
+            {posts.map((post) => (
+              <article
+                key={post.slug}
+                className="border border-gray-800 rounded-lg p-6 hover:border-red-600 transition-colors"
+              >
+                <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                  <span className="text-red-500">{post.category}</span>
+                  <span>•</span>
+                  <span>{post.date}</span>
+                  <span>•</span>
+                  <span>{post.readTime}</span>
+                </div>
+                <h2 className="text-2xl font-bold text-white mb-3">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="hover:text-red-500 transition-colors"
+                  >
+                    {post.title}
+                  </Link>
+                </h2>
+                <p className="text-gray-400 mb-4">{post.excerpt}</p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="hover:text-red-500 transition-colors"
+                  className="text-red-500 hover:text-red-400 font-medium"
                 >
-                  {post.title}
+                  Read more →
                 </Link>
-              </h2>
-              <p className="text-gray-400 mb-4">{post.excerpt}</p>
-              <Link
-                href={`/blog/${post.slug}`}
-                className="text-red-500 hover:text-red-400 font-medium"
-              >
-                Read more →
-              </Link>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }

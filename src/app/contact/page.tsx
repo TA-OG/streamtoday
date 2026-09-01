@@ -49,8 +49,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Call us</h3>
                     <p className="text-gray-600">
-                      <a href="tel:+441158241234" className="hover:text-black transition-colors">
-                        0115 824 1234
+                      <a href="tel:+447763741309" className="hover:text-black transition-colors">
+                        +44 7763 741309
                       </a>
                     </p>
                   </div>
@@ -63,8 +63,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-bold mb-1">Email us</h3>
                     <p className="text-gray-600">
-                      <a href="mailto:hello@streamtoday.studio" className="hover:text-black transition-colors">
-                        hello@streamtoday.studio
+                      <a href="mailto:hello@streamtoday.co.uk" className="hover:text-black transition-colors">
+                        hello@streamtoday.co.uk
                       </a>
                     </p>
                   </div>

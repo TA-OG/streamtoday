@@ -1,5 +1,10 @@
-import Link from 'next/link';
-import { Download, FileText, ClipboardList, Calendar } from 'lucide-react';
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Navigation } from "@/components/sections/Navigation";
+import { Footer } from "@/components/sections/Footer";
+import { Download, FileText, ClipboardList, Calendar, ArrowRight, Check } from "lucide-react";
 
 const resources = [
   {
@@ -31,8 +36,21 @@ const resources = [
 ];
 
 export default function ResourcesPage() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    setSubmitted(true);
+    setLoading(false);
+  };
+
   return (
     <>
+      <Navigation />
       <div className="pt-24 pb-16 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-red-600 font-bold tracking-widest uppercase text-sm mb-4 block">
@@ -50,9 +68,66 @@ export default function ResourcesPage() {
 
       <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {!submitted ? (
+            <div className="max-w-xl mx-auto mb-16">
+              <div className="bg-gray-50 p-8 lg:p-12 rounded-sm">
+                <h3 className="text-2xl font-bold mb-2">Unlock your downloads</h3>
+                <p className="text-gray-600 mb-8">
+                  Enter your email and get instant access to all resources.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="resource-email" className="block text-sm font-medium mb-2">
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      id="resource-email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="you@company.com"
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full inline-flex items-center justify-center px-6 py-4 bg-red-600 text-white font-black uppercase tracking-widest hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {loading ? (
+                      "Sending..."
+                    ) : (
+                      <>
+                        Get Free Access
+                        <ArrowRight className="ml-2" size={20} />
+                      </>
+                    )}
+                  </button>
+                </form>
+
+                <p className="text-xs text-gray-500 mt-4">
+                  No spam. Unsubscribe anytime. We respect your privacy.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="max-w-xl mx-auto mb-16 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Check className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">You&apos;re in!</h3>
+              <p className="text-gray-600">
+                Your downloads are unlocked. If you don&apos;t see a confirmation email, check your spam folder.
+              </p>
+            </div>
+          )}
+
           <div className="grid md:grid-cols-3 gap-10">
             {resources.map((resource) => (
-              <div key={resource.title} className="bg-gray-50 p-10 rounded-sm">
+              <div key={resource.title} className={`bg-gray-50 p-10 rounded-sm ${!submitted ? "opacity-50 pointer-events-none" : ""}`}>
                 <resource.icon className="w-12 h-12 text-red-600 mb-6" />
                 <h2 className="text-2xl font-bold mb-4">{resource.title}</h2>
                 <p className="text-gray-600 mb-8 leading-relaxed">{resource.description}</p>
@@ -86,6 +161,7 @@ export default function ResourcesPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

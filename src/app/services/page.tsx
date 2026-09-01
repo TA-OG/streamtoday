@@ -2,6 +2,7 @@ import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
 import { Mic, Video, Sparkles, Users, Clapperboard, Radio, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const services = [
   {
@@ -9,6 +10,7 @@ const services = [
     title: "Podcast Recording",
     description: "Professional podcast recording for up to 4 guests. Multi-track audio, 4K video optional, and same-day file delivery.",
     price: "From £299",
+    image: "/images/cave-studio.png",
     features: [
       "Acoustically treated space",
       "Shure SM7B microphones",
@@ -22,6 +24,7 @@ const services = [
     title: "Video Production",
     description: "YouTube-ready productions with cinema-grade cameras, professional lighting, and full post-production.",
     price: "From £399",
+    image: "/images/studio-hero-1.jpg",
     features: [
       "Sony FX6 / Blackmagic 6K",
       "Professional lighting grid",
@@ -35,6 +38,7 @@ const services = [
     title: "Social Media Content",
     description: "Batch-shoot a month of content in one session. Optimised for TikTok, Instagram Reels, and YouTube Shorts.",
     price: "From £349",
+    image: "/images/studio-hero-2.jpg",
     features: [
       "Vertical + horizontal formats",
       "Trending audio licensing",
@@ -48,6 +52,7 @@ const services = [
     title: "Corporate Content",
     description: "Executive interviews, thought leadership, and internal communications. Professional without the corporate stiffness.",
     price: "From £499",
+    image: "/images/green-room-2.jpg",
     features: [
       "Branded backdrops",
       "Teleprompter available",
@@ -61,6 +66,7 @@ const services = [
     title: "Live Streaming",
     description: "Multi-platform live streaming with professional production values. Go live to your audience wherever they are.",
     price: "From £599",
+    image: "/images/hero-dark.jpg",
     features: [
       "Multi-platform simulcast",
       "Live graphics & overlays",
@@ -74,6 +80,7 @@ const services = [
     title: "Post-Production",
     description: "Full editing suite for projects shot with us or elsewhere. Colour, sound design, and delivery in all formats.",
     price: "From £199",
+    image: "/images/green-room-3.jpg",
     features: [
       "Professional editing",
       "Colour correction & grading",
@@ -136,10 +143,14 @@ export default function ServicesPage() {
                     </Link>
                   </div>
                 </div>
-                <div className={`aspect-video bg-gray-100 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500">{service.title} Image</span>
-                  </div>
+                <div className={`aspect-video bg-gray-100 relative overflow-hidden rounded-sm ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             ))}

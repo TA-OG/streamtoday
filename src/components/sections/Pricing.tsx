@@ -21,6 +21,23 @@ const plans = [
     popular: false,
   },
   {
+    name: "Studio One",
+    price: "75",
+    period: "/hour",
+    description: "Our flagship studio. Up to 8 guests, full multi-camera setup, and premium acoustics.",
+    features: [
+      "Up to 8 guests on camera",
+      "Multi-camera broadcast setup",
+      "Shure SM7B + Rode PodMic mix",
+      "4K video recording",
+      "LIVE EDITING while you record",
+      "Raw files within 24 hours",
+    ],
+    cta: "Book Studio One",
+    href: "https://streamtoday.as.me/",
+    popular: false,
+  },
+  {
     name: "Content Retainer",
     price: "549",
     period: "/month",
@@ -72,7 +89,7 @@ export function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {plans.map((plan) => (
             <div
               key={plan.name}
