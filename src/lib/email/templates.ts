@@ -129,7 +129,7 @@ export const emailTemplates = {
               <table width="100%" cellpadding="0" cellspacing="0" style="margin: 40px 0;">
                 <tr>
                   <td align="center">
-                    <a href="https://streamtoday.studio/contact" style="display: inline-block; padding: 16px 32px; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold;">Contact Us</a>
+                    <a href="https://streamtoday.co.uk/contact" style="display: inline-block; padding: 16px 32px; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold;">Contact Us</a>
                   </td>
                 </tr>
               </table>
@@ -148,7 +148,7 @@ export const emailTemplates = {
                 20 Fletcher Gate, Nottingham NG1 2FZ
               </p>
               <p style="margin: 0; font-size: 12px; color: #999999;">
-                <a href="https://streamtoday.studio" style="color: #666666; text-decoration: underline;">streamtoday.studio</a>
+                <a href="https://streamtoday.co.uk" style="color: #666666; text-decoration: underline;">streamtoday.co.uk</a>
               </p>
             </td>
           </tr>
@@ -252,7 +252,7 @@ export const emailTemplates = {
               <table width="100%" cellpadding="0" cellspacing="0" style="margin: 30px 0;">
                 <tr>
                   <td align="center">
-                    <a href="https://streamtoday.studio/book" style="display: inline-block; padding: 14px 28px; background-color: #ffffff; color: #000000; text-decoration: none; font-weight: bold; border: 2px solid #000000;">Book a Session</a>
+                    <a href="https://streamtoday.co.uk/book" style="display: inline-block; padding: 14px 28px; background-color: #ffffff; color: #000000; text-decoration: none; font-weight: bold; border: 2px solid #000000;">Book a Session</a>
                   </td>
                 </tr>
               </table>
@@ -311,7 +311,7 @@ export const emailTemplates = {
               <table width="100%" cellpadding="0" cellspacing="0" style="margin: 40px 0;">
                 <tr>
                   <td align="center">
-                    <a href="https://streamtoday.studio/book" style="display: inline-block; padding: 16px 32px; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold;">Book Your Session</a>
+                    <a href="https://streamtoday.co.uk/book" style="display: inline-block; padding: 16px 32px; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold;">Book Your Session</a>
                   </td>
                 </tr>
               </table>
@@ -366,7 +366,7 @@ export const emailTemplates = {
               <table width="100%" cellpadding="0" cellspacing="0" style="margin: 40px 0;">
                 <tr>
                   <td align="center">
-                    <a href="https://streamtoday.studio/book" style="display: inline-block; padding: 16px 32px; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold;">Book Your Session</a>
+                    <a href="https://streamtoday.co.uk/book" style="display: inline-block; padding: 16px 32px; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold;">Book Your Session</a>
                   </td>
                 </tr>
               </table>
@@ -420,7 +420,7 @@ export const emailTemplates = {
               <table width="100%" cellpadding="0" cellspacing="0" style="margin: 40px 0;">
                 <tr>
                   <td align="center">
-                    <a href="https://streamtoday.studio/book" style="display: inline-block; padding: 16px 32px; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold;">Book Now</a>
+                    <a href="https://streamtoday.co.uk/book" style="display: inline-block; padding: 16px 32px; background-color: #000000; color: #ffffff; text-decoration: none; font-weight: bold;">Book Now</a>
                   </td>
                 </tr>
               </table>

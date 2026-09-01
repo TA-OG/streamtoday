@@ -12,13 +12,14 @@ interface BookingConfirmationProps {
   };
 }
 
-export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
-  const planNames: Record<string, string> = {
-    single: "Single Session",
-    package: "Content Package",
-    retainer: "Retainer",
-  };
+const planNames: Record<string, string> = {
+  "cave-studio": "Cave Studio",
+  "studio-one": "Studio One",
+  "content-retainer": "Content Retainer",
+  "content-engine": "The Content Engine",
+};
 
+export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
   return (
     <div className="p-6 lg:p-12 text-center">
       <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -27,8 +28,8 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
 
       <h2 className="heading-md mb-4">Booking confirmed!</h2>
       <p className="body-lg mb-8 max-w-lg mx-auto">
-        Thanks {bookingData.firstName}. We&apos;ve sent a confirmation to {bookingData.email} 
-        with all the details.
+        Thanks {bookingData.firstName}. We&apos;ve sent a confirmation to {bookingData.email}
+        with all the details and deposit payment instructions.
       </p>
 
       <div className="bg-gray-50 p-6 max-w-md mx-auto mb-8 text-left">
@@ -51,7 +52,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
           </div>
           <div className="flex items-center gap-3">
             <Mail className="w-4 h-4 text-gray-500" />
-            <span>{planNames[bookingData.plan || "single"]}</span>
+            <span>{planNames[bookingData.plan || "cave-studio"]}</span>
           </div>
         </div>
       </div>
@@ -61,7 +62,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
         <div className="grid sm:grid-cols-3 gap-4 text-sm">
           <div className="p-4 bg-gray-50">
             <div className="font-bold mb-2">1. Confirmation email</div>
-            <p className="text-gray-600">Check your inbox for booking details and calendar invite.</p>
+            <p className="text-gray-600">Check your inbox for booking details and deposit invoice.</p>
           </div>
           <div className="p-4 bg-gray-50">
             <div className="font-bold mb-2">2. Reminder</div>

@@ -17,7 +17,7 @@ interface SendEmailOptions {
   from?: string;
 }
 
-export async function sendEmail({ to, subject, html, from = "StreamToday <hello@streamtoday.studio>" }: SendEmailOptions) {
+export async function sendEmail({ to, subject, html, from = "StreamToday <hello@streamtoday.co.uk>" }: SendEmailOptions) {
   const client = getResend();
   
   if (!client) {
@@ -99,7 +99,7 @@ export async function sendLeadMagnet(lead: {
   const template = emailTemplates.leadMagnet({
     firstName: lead.first_name || "",
     leadMagnetName: lead.lead_magnet || "Content Audit Template",
-    downloadUrl: "https://streamtoday.studio/downloads/content-audit-template.pdf",
+    downloadUrl: "https://streamtoday.co.uk/downloads/content-audit-template.pdf",
   });
 
   return sendEmail({
