@@ -17,7 +17,7 @@ const plans = [
       "Raw files within 24 hours",
     ],
     cta: "Book Cave Studio",
-    href: "https://streamtoday.as.me/",
+    href: "/book",
     popular: false,
   },
   {
@@ -34,7 +34,7 @@ const plans = [
       "Raw files within 24 hours",
     ],
     cta: "Book Studio One",
-    href: "https://streamtoday.as.me/",
+    href: "/book",
     popular: false,
   },
   {
@@ -51,7 +51,7 @@ const plans = [
       "48-hour turnaround guaranteed",
     ],
     cta: "Start Retainer",
-    href: "https://streamtoday.as.me/",
+    href: "/book",
     popular: true,
   },
   {
@@ -69,7 +69,7 @@ const plans = [
       "Priority 'Red Phone' support",
     ],
     cta: "Start The Engine (3 Spots)",
-    href: "https://streamtoday.as.me/",
+    href: "/book",
     popular: false,
     highlight: true,
   },

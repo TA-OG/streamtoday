@@ -226,7 +226,7 @@ export default function BlogPost() {
             At StreamToday Studios, we've already invested in the room so you don't have to. Professional acoustics, quality microphones, and live editing — all included. Walk out with publish-ready audio in two hours.
           </p>
           <a
-            href="https://streamtoday.as.me/schedule/b2a579b5"
+            href="/book"
             className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors text-lg"
           >
             Book a Session →

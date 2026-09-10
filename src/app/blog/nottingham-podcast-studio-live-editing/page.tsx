@@ -320,7 +320,7 @@ export default function BlogPost() {
             Book a session at StreamToday Studios. Walk in with ideas, walk out with finished content. No editing queue. No revision cycles. No waiting.
           </p>
           <a
-            href="https://streamtoday.as.me/"
+            href="/book"
             className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors text-lg"
           >
             Book Your Session →

@@ -2,13 +2,14 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
+import { getAllPosts } from "@/lib/markdown";
 
 export const metadata: Metadata = {
   title: "Blog | StreamTODAY Studios",
   description: "Expert podcasting advice, studio tips, and growth strategies from Nottingham's leading podcast studio.",
 };
 
-const posts = [
+const hardcodedPosts = [
   {
     slug: "how-to-get-first-1000-podcast-listeners",
     title: "How to Get Your First 1,000 Podcast Listeners (Without Buying Ads)",
@@ -67,7 +68,24 @@ const posts = [
   },
 ];
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const markdownPosts = await getAllPosts();
+
+  const allPosts = [
+    ...hardcodedPosts.map((p) => ({ ...p, href: `/blog/${p.slug}` })),
+    ...markdownPosts
+      .filter((p) => !hardcodedPosts.some((h) => h.slug === p.slug))
+      .map((p) => ({
+        slug: p.slug,
+        title: p.title,
+        excerpt: p.excerpt,
+        date: p.date,
+        category: p.category,
+        readTime: p.readTime,
+        href: `/blog/${p.slug}`,
+      })),
+  ].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
   return (
     <>
       <Navigation />
@@ -77,12 +95,12 @@ export default function BlogPage() {
             StreamTODAY Blog
           </h1>
           <p className="text-xl text-gray-400 mb-12 max-w-2xl">
-            Expert podcasting advice, studio tips, and growth strategies. 
+            Expert podcasting advice, studio tips, and growth strategies.
             No fluff. No equipment worship. Just what works.
           </p>
 
           <div className="space-y-8">
-            {posts.map((post) => (
+            {allPosts.map((post) => (
               <article
                 key={post.slug}
                 className="border border-gray-800 rounded-lg p-6 hover:border-red-600 transition-colors"
@@ -96,7 +114,7 @@ export default function BlogPage() {
                 </div>
                 <h2 className="text-2xl font-bold text-white mb-3">
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={post.href}
                     className="hover:text-red-500 transition-colors"
                   >
                     {post.title}
@@ -104,7 +122,7 @@ export default function BlogPage() {
                 </h2>
                 <p className="text-gray-400 mb-4">{post.excerpt}</p>
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={post.href}
                   className="text-red-500 hover:text-red-400 font-medium"
                 >
                   Read more →

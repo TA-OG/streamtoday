@@ -473,7 +473,7 @@ export default function BlogPost() {
             Book a session at StreamToday Studios in Nottingham's Lace Market. We specialise in removing the barriers between you and great content. Live editing, professional acoustics, broadcast-quality equipment — everything you need, nothing you don't.
           </p>
           <a
-            href="https://streamtoday.as.me/schedule/b2a579b5"
+            href="/book"
             className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors text-lg"
           >
             Book a Session →

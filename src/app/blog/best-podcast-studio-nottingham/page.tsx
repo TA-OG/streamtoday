@@ -474,7 +474,7 @@ export default function BlogPost() {
             Don't take my word for it. Come and see for yourself. We offer free 15-minute studio tours. No pitch, no pressure. Just walk through the space, ask questions, and decide if it's right for you.
           </p>
           <a
-            href="https://streamtoday.as.me/schedule/b2a579b5"
+            href="/book"
             className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors text-lg"
           >
             Book a Tour →

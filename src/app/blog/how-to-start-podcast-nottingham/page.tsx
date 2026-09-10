@@ -404,7 +404,7 @@ export default function BlogPost() {
             Book your first recording session at StreamToday Studios. We'll handle the technical side so you can focus on your content. Walk out with a finished episode.
           </p>
           <a
-            href="https://streamtoday.as.me/schedule/b2a579b5"
+            href="/book"
             className="inline-block bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
           >
             Book Your First Session

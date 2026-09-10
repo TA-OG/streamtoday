@@ -465,7 +465,7 @@ export default function BlogPost() {
         <div className="mt-16 p-8 bg-gradient-to-br from-red-900/50 to-red-950/50 rounded-2xl border border-red-800">
           <h3 className="text-2xl font-bold text-white mb-4">Focus on Growth, Not Production</h3>
           <p className="text-gray-300 mb-6 text-lg">At StreamToday Studios, we help podcasters focus on growth by removing the production burden. Our live-editing technology means you walk out with a finished episode, not a project file. Spend your time on what matters: building your audience.</p>
-          <a href="https://streamtoday.as.me/schedule/b2a579b5" className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors text-lg">Book a Session</a>
+          <a href="/book" className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors text-lg">Book a Session</a>
         </div>
 
         <div className="mt-12 flex items-center justify-between py-6 border-t border-gray-800">

@@ -19,7 +19,7 @@ export default function LifeSciencesLandingPage() {
               <span className="text-lg font-black tracking-tighter text-white uppercase">StreamTODAY</span>
             </Link>
             <Link
-              href="https://streamtoday.as.me/?appointmentType=42416301"
+              href="/book"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-black uppercase tracking-widest transition-all rounded-sm"
@@ -47,7 +47,7 @@ export default function LifeSciencesLandingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="https://streamtoday.as.me/?appointmentType=42416301"
+                  href="/book"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-widest transition-all rounded-sm text-center"
@@ -205,7 +205,7 @@ export default function LifeSciencesLandingPage() {
                 </li>
               </ul>
               <a
-                href="https://streamtoday.as.me/?appointmentType=42416301"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-center py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-sm transition-colors"
@@ -246,7 +246,7 @@ export default function LifeSciencesLandingPage() {
                 </li>
               </ul>
               <a
-                href="https://streamtoday.as.me/?appointmentType=42416302"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-center py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-sm transition-colors"
@@ -282,7 +282,7 @@ export default function LifeSciencesLandingPage() {
                 </li>
               </ul>
               <a
-                href="https://streamtoday.as.me/?appointmentType=42416303"
+                href="/book"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-center py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-sm transition-colors"
@@ -302,7 +302,7 @@ export default function LifeSciencesLandingPage() {
             Book a free pilot episode. Zero commitment. If it doesn't fit your compliance or strategy, you've lost nothing.
           </p>
           <a
-            href="https://streamtoday.as.me/?appointmentType=42416301"
+            href="/book"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-widest transition-all rounded-sm"
