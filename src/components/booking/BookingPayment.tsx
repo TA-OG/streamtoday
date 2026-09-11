@@ -84,7 +84,7 @@ export function BookingPayment({ bookingData, onComplete, onBack }: BookingPayme
         <div>
           <h3 className="text-xl font-bold mb-2">Confirm your booking</h3>
           <p className="text-gray-600 mb-6">
-            Review your details below and confirm. We&apos;ll send a confirmation email with payment instructions for the £{deposit} deposit.
+            Review your details below and confirm. A non-refundable deposit of £{deposit} is required to secure your booking. The deposit is credited in full toward your session fee or subscription.
           </p>
 
           {error && (
@@ -192,9 +192,9 @@ export function BookingPayment({ bookingData, onComplete, onBack }: BookingPayme
           <div className="mt-6 p-4 bg-white border border-gray-200">
             <h5 className="font-medium mb-2">Cancellation policy</h5>
             <p className="text-xs text-gray-600">
-              Full refund for cancellations 48+ hours before session.
-              50% charge for cancellations within 48 hours.
-              No refund for no-shows.
+              Deposit is non-refundable and credited to your session or subscription.
+              Cancellations more than 48 hours before the session may reschedule or receive credit.
+              Cancellations within 48 hours or no-shows forfeit the deposit. No cash refunds.
             </p>
           </div>
         </div>

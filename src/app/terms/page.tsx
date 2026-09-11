@@ -16,15 +16,16 @@ export default function TermsPage() {
         <div className="max-w-4xl mx-auto section-padding prose prose-lg">
           <h2>1. Booking and Payment</h2>
           <p>
-            All bookings require a deposit to secure your slot. The remaining balance 
-            is due on the day of your session. We accept card payments and bank transfers.
+            All bookings require a non-refundable deposit to secure your slot. The deposit amount is displayed at checkout and is credited in full toward your session fee or monthly subscription. The remaining balance is due on the day of your session. We accept card payments and bank transfers.
           </p>
 
-          <h2>2. Cancellation Policy</h2>
+          <h2>2. Cancellation and No-Show Policy</h2>
           <ul>
-            <li>Cancellations 48+ hours before session: Full refund or credit</li>
-            <li>Cancellations within 48 hours: 50% charge</li>
-            <li>No-shows: Full session fee charged</li>
+            <li><strong>Deposit is non-refundable.</strong> It is credited in full toward your session or subscription.</li>
+            <li>Cancellations more than 48 hours before the session may reschedule or receive a credit toward a future booking.</li>
+            <li>Cancellations within 48 hours of the scheduled session time forfeit the deposit.</li>
+            <li>No-shows forfeit the deposit in full.</li>
+            <li>No cash refunds are issued under any circumstances.</li>
           </ul>
 
           <h2>3. Rescheduling</h2>

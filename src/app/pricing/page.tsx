@@ -144,11 +144,10 @@ export default function PricingPage() {
             <div>
               <h3 className="font-bold mb-2 flex items-center gap-2">
                 <HelpCircle size={18} />
-                What if I need to cancel a session?
+                What if I need to cancel or reschedule?
               </h3>
               <p className="text-gray-600">
-                Cancellations with 48 hours notice receive a full refund or credit. 
-                Less than 48 hours incurs a 50% charge. No-shows are charged in full.
+                A non-refundable deposit is required to secure your booking. The deposit is credited in full toward your session or monthly subscription. Cancellations with more than 48 hours notice may reschedule or receive a credit. Cancellations within 48 hours or no-shows forfeit the deposit. No cash refunds.
               </p>
             </div>
 

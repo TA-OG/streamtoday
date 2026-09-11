@@ -115,6 +115,18 @@ export const emailTemplates = {
               <p style="margin: 0 0 20px 0; font-size: 14px; color: #666666;">
                 The remaining balance is due on the day of your session.
               </p>
+
+              <!-- Deposit Policy -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #fef2f2; border: 1px solid #fecaca; margin: 20px 0;">
+                <tr>
+                  <td style="padding: 20px;">
+                    <h4 style="margin: 0 0 10px 0; font-size: 14px; color: #991b1b;">Deposit Policy</h4>
+                    <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #7f1d1d;">
+                      Your deposit is non-refundable and credited in full toward your session fee or subscription. Cancellations more than 48 hours before the session may reschedule or receive credit. Cancellations within 48 hours or no-shows forfeit the deposit. No cash refunds.
+                    </p>
+                  </td>
+                </tr>
+              </table>
               
               <!-- What to Expect -->
               <h3 style="margin: 30px 0 20px 0; font-size: 18px; color: #000000;">What to expect</h3>
@@ -198,7 +210,7 @@ export const emailTemplates = {
                 </tr>
               </table>
               <p style="margin: 0; font-size: 14px; color: #666666;">
-                Please arrive 10 minutes early. If you need to cancel or reschedule, call us on 0115 824 1234.
+                Please arrive 10 minutes early. Need to cancel or reschedule? Cancellations within 48 hours forfeit your deposit. Call us on 0115 824 1234.
               </p>
             </td>
           </tr>

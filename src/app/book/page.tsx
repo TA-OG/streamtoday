@@ -61,6 +61,31 @@ export default function BookPage() {
             </p>
           </div>
 
+          {/* Deposit Policy Notice */}
+          <div className="mb-8 p-6 bg-red-950/50 border border-red-800 rounded-xl">
+            <h2 className="text-lg font-bold text-red-400 mb-3">
+              Deposit Policy — Please Read Before Booking
+            </h2>
+            <ul className="space-y-2 text-gray-300 text-sm">
+              <li className="flex items-start gap-2">
+                <span className="text-red-500 font-bold">•</span>
+                <span>A <strong className="text-white">non-refundable deposit</strong> is required to secure your booking. The deposit amount is displayed at checkout.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-red-500 font-bold">•</span>
+                <span>The deposit is <strong className="text-white">credited in full</strong> toward your session fee or monthly subscription.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-red-500 font-bold">•</span>
+                <span><strong className="text-white">No-shows</strong> and <strong className="text-white">cancellations within 48 hours</strong> of the scheduled session time will result in the <strong className="text-white">forfeiture of the deposit</strong>.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-red-500 font-bold">•</span>
+                <span>Cancellations made <strong className="text-white">more than 48 hours</strong> in advance may reschedule or receive a credit. No cash refunds.</span>
+              </li>
+            </ul>
+          </div>
+
           <div
             id="cal-embed-container"
             ref={containerRef}

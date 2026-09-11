@@ -128,6 +128,13 @@ export function Pricing() {
                 )}
               </div>
 
+              {/* Deposit notice */}
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded">
+                <p className="text-xs text-red-800 font-medium">
+                  Deposit required. Forfeited on no-show or cancellations within 48 hours. Credited to your session or subscription.
+                </p>
+              </div>
+
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">

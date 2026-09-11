@@ -29,7 +29,7 @@ export function BookingConfirmation({ bookingData }: BookingConfirmationProps) {
       <h2 className="heading-md mb-4">Booking confirmed!</h2>
       <p className="body-lg mb-8 max-w-lg mx-auto">
         Thanks {bookingData.firstName}. We&apos;ve sent a confirmation to {bookingData.email}
-        with all the details and deposit payment instructions.
+        with all the details. Please note: a non-refundable deposit is required to secure your booking. The deposit is credited in full toward your session fee or subscription.
       </p>
 
       <div className="bg-gray-50 p-6 max-w-md mx-auto mb-8 text-left">
