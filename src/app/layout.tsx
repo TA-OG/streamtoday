@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "StreamToday Studios | Premier Podcast & Video Content in Nottingham",
   description: "Nottingham's only live-editing podcast studio. 4K video, professional audio, and batch content production for business leaders in the East Midlands.",
   keywords: ["podcast studio nottingham", "video production lace market", "live editing podcast", "business content studio", "StreamToday Allan Okello"],
+  icons: {
+    icon: "/images/logo-sq-transparent.png",
+    apple: "/images/logo-sq-transparent.png",
+  },
   openGraph: {
     title: "StreamToday Studios | Stop Creating. Start Orchestrating.",
     description: "Professional 4K podcast and video studio in Nottingham. Walk out with finished content.",
