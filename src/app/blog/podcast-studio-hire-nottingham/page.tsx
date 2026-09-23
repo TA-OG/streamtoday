@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     title: "Podcast Studio Hire Nottingham",
     description: "Professional podcast studio hire from £45/hour. Book today.",
   },
+  alternates: {
+    canonical: "/blog/podcast-studio-hire-nottingham",
+  },
 };
 
 export default function BlogPost() {

@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Podcast Studio Nottingham | Live-Editing Video & Audio | StreamToday",
   description: "Professional podcast studio hire in Nottingham from £45/hour. Live-editing, 4K video, multi-track audio. Cave Studio (4 guests) & Studio One (8 guests). Book today.",
   keywords: ["podcast studio nottingham", "video production lace market", "live editing podcast", "business content studio", "StreamToday Allan Okello"],
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/images/logo-sq-transparent.png",
     apple: "/images/logo-sq-transparent.png",

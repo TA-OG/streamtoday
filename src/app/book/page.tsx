@@ -6,6 +6,9 @@ import CalEmbed from "@/components/sections/CalEmbed";
 export const metadata: Metadata = {
   title: "Book a Podcast Studio Session Nottingham | StreamToday",
   description: "Book your podcast or video recording session at StreamToday Studios in Nottingham. Cave Studio £45/hour, Studio One £75/hour. Live-editing included. Deposit required.",
+  alternates: {
+    canonical: "/book",
+  },
 };
 
 export default function BookPage() {

@@ -7,6 +7,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About StreamToday Studios | Nottingham Podcast & Video Studio",
   description: "Nottingham's professional podcast and video studio in the Lace Market. Built by creators, for creators. 500+ sessions, 200+ clients. Meet the team.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const stats = [

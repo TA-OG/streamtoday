@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     title: "How Much Does a Podcast Studio Cost in Nottingham?",
     description: "Studio costs explained: £45-£75/hour. Home setup vs professional hire.",
   },
+  alternates: {
+    canonical: "/blog/how-much-does-podcast-studio-cost-nottingham",
+  },
 };
 
 export default function BlogPost() {

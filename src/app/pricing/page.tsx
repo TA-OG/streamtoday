@@ -8,6 +8,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Podcast Studio Pricing Nottingham | From £45/hour | StreamToday",
   description: "Transparent podcast studio pricing in Nottingham. Cave Studio £45/hour, Studio One £75/hour. Live-editing, 4K video, engineer included. No hidden fees.",
+  alternates: {
+    canonical: "/pricing",
+  },
 };
 
 const addons = [

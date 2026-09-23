@@ -8,6 +8,9 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Podcast & Video Production Services Nottingham | StreamToday",
   description: "Professional podcast recording, video production, live streaming, and social content creation in Nottingham. From £299 per session. Live-editing included.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 const services = [
