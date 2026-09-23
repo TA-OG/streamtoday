@@ -1,8 +1,14 @@
+import { Metadata } from "next";
 import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
 import { Mic, Video, Sparkles, Users, Clapperboard, Radio, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Podcast & Video Production Services Nottingham | StreamToday",
+  description: "Professional podcast recording, video production, live streaming, and social content creation in Nottingham. From £299 per session. Live-editing included.",
+};
 
 const services = [
   {

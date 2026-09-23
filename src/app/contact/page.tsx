@@ -1,7 +1,13 @@
+import { Metadata } from "next";
 import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
 import { LeadMagnet } from "@/components/sections/LeadMagnet";
 import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Contact StreamToday Studios | Nottingham Podcast Studio",
+  description: "Get in touch with StreamToday Studios in Nottingham. Book a tour, request a quote, or ask about our podcast and video production services. 20 Fletcher Gate, Lace Market.",
+};
 
 export default function ContactPage() {
   return (

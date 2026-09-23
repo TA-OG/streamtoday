@@ -1,52 +1,14 @@
-'use client'
+import { Metadata } from "next";
+import { Navigation } from "@/components/sections/Navigation";
+import { Footer } from "@/components/sections/Footer";
+import CalEmbed from "@/components/sections/CalEmbed";
 
-import { useEffect, useRef } from 'react'
-import { Navigation } from '@/components/sections/Navigation'
-import { Footer } from '@/components/sections/Footer'
+export const metadata: Metadata = {
+  title: "Book a Podcast Studio Session Nottingham | StreamToday",
+  description: "Book your podcast or video recording session at StreamToday Studios in Nottingham. Cave Studio £45/hour, Studio One £75/hour. Live-editing included. Deposit required.",
+};
 
 export default function BookPage() {
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const existing = document.getElementById('cal-embed-script')
-    if (existing) return
-
-    const script = document.createElement('script')
-    script.id = 'cal-embed-script'
-    script.type = 'text/javascript'
-    script.innerHTML = `
-      (function (C, A, L) {
-        let p = function (a, ar) { a.q.push(ar); };
-        let d = C.document;
-        C.Cal = C.Cal || function () {
-          let cal = C.Cal;
-          let ar = arguments;
-          if (!cal.loaded) {
-            cal.ns = {};
-            cal.q = cal.q || [];
-            d.head.appendChild(d.createElement("script")).src = A;
-            cal.loaded = true;
-          }
-          if (ar[0] === L) {
-            const api = function () { p(api, arguments); };
-            const namespace = ar[1];
-            api.q = api.q || [];
-            typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
-            return;
-          }
-          p(cal, ar);
-        };
-      })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", {origin:"https://cal.com"});
-      Cal("inline", {
-        elementOrSelector: "#cal-embed-container",
-        calLink: "stream-today-studios",
-        layout: "month_view"
-      });
-    `
-    document.body.appendChild(script)
-  }, [])
-
   return (
     <>
       <Navigation />
@@ -86,15 +48,10 @@ export default function BookPage() {
             </ul>
           </div>
 
-          <div
-            id="cal-embed-container"
-            ref={containerRef}
-            style={{ width: '100%', minHeight: '800px', overflow: 'auto' }}
-            className="rounded-xl bg-white"
-          />
+          <CalEmbed />
         </div>
       </main>
       <Footer />
     </>
-  )
+  );
 }

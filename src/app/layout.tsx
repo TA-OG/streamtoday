@@ -6,6 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://streamtoday.co.uk"),
   title: "Podcast Studio Nottingham | Live-Editing Video & Audio | StreamToday",
   description: "Professional podcast studio hire in Nottingham from £45/hour. Live-editing, 4K video, multi-track audio. Cave Studio (4 guests) & Studio One (8 guests). Book today.",
   keywords: ["podcast studio nottingham", "video production lace market", "live editing podcast", "business content studio", "StreamToday Allan Okello"],
@@ -14,12 +15,23 @@ export const metadata: Metadata = {
     apple: "/images/logo-sq-transparent.png",
   },
   openGraph: {
-    title: "StreamToday Studios | Stop Creating. Start Orchestrating.",
-    description: "Professional 4K podcast and video studio in Nottingham. Walk out with finished content.",
-    url: "https://streamtoday.co.uk",
+    title: "Podcast Studio Nottingham | Live-Editing Video & Audio | StreamToday",
+    description: "Professional podcast studio hire in Nottingham from £45/hour. Live-editing, 4K video, multi-track audio. Book today.",
     siteName: "StreamToday Studios",
     locale: "en_GB",
     type: "website",
+    images: [{
+      url: "/images/logo-sq-transparent.png",
+      width: 512,
+      height: 512,
+      alt: "StreamToday Studios Logo",
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Podcast Studio Nottingham | Live-Editing Video & Audio | StreamToday",
+    description: "Professional podcast studio hire in Nottingham from £45/hour. Live-editing, 4K video, multi-track audio. Book today.",
+    images: ["/images/logo-sq-transparent.png"],
   },
 };
 

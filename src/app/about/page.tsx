@@ -1,7 +1,13 @@
+import { Metadata } from "next";
 import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
 import { ArrowRight, MapPin, Award, Users } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About StreamToday Studios | Nottingham Podcast & Video Studio",
+  description: "Nottingham's professional podcast and video studio in the Lace Market. Built by creators, for creators. 500+ sessions, 200+ clients. Meet the team.",
+};
 
 const stats = [
   { number: "500+", label: "Sessions Recorded" },
