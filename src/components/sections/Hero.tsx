@@ -30,13 +30,13 @@ export function Hero() {
           </div>
           
           <h1 className="text-[3.6rem] md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
-            YOUR BRAND,<br />
-            <span className="text-red-600">BROADCAST</span> READY.
+            NOTTINGHAM&apos;S<br />
+            <span className="text-red-600">PODCAST STUDIO</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-2xl font-medium">
-            Professional podcast and video content from the heart of Nottingham. 
-            We provide the gear, the space, and the polish. You just show up and create.
+            Professional podcast and video recording studio in Nottingham&apos;s Lace Market. 
+            Live-editing, 4K video, and pro audio. You show up, we handle the rest.
           </p>
 
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">

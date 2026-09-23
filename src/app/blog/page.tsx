@@ -11,6 +11,22 @@ export const metadata: Metadata = {
 
 const hardcodedPosts = [
   {
+    slug: "podcast-studio-hire-nottingham",
+    title: "Podcast Studio Hire in Nottingham: What You Get and What It Costs",
+    excerpt: "Everything you need to know about hiring a professional podcast studio in Nottingham, from what's included to how to book. Cave Studio from £45/hour, Studio One from £75/hour.",
+    date: "2026-09-23",
+    category: "Studio Hire",
+    readTime: "8 min read",
+  },
+  {
+    slug: "how-much-does-podcast-studio-cost-nottingham",
+    title: "How Much Does a Podcast Studio Cost in Nottingham and the East Midlands?",
+    excerpt: "The real cost of podcasting: home setup vs studio hire, hidden expenses, and what you actually get for your money. Professional studios from £45-£75/hour.",
+    date: "2026-09-23",
+    category: "Pricing Guide",
+    readTime: "10 min read",
+  },
+  {
     slug: "how-to-get-first-1000-podcast-listeners",
     title: "How to Get Your First 1,000 Podcast Listeners (Without Buying Ads)",
     excerpt: "The uncomfortable truth about podcast growth: most shows never reach 1,000 listeners. Here's the systematic approach that actually works.",
