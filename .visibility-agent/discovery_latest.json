@@ -1,0 +1,198 @@
+{
+  "pages_discovered": 1,
+  "pages_crawled": 1,
+  "inventory": [
+    {
+      "url": "https://www.streamtoday.co.uk",
+      "status_code": 200,
+      "title": "StreamToday Studios | Premier Podcast & Video Content in Nottingham",
+      "h1": "YOUR BRAND,BROADCASTREADY.",
+      "meta_title": "StreamToday Studios | Premier Podcast & Video Content in Nottingham",
+      "meta_description": "Nottingham's only live-editing podcast studio. 4K video, professional audio, and batch content production for business leaders in the East Midlands.",
+      "canonical": null,
+      "robots_meta": null,
+      "word_count": 1070,
+      "headings": {
+        "h1": [
+          "YOUR BRAND,BROADCASTREADY."
+        ],
+        "h2": [
+          "Everything you need to create.",
+          "Two studios. One mission. Professional content.",
+          "Simple pricing. No surprises.",
+          "Free Content Audit Template",
+          "Questions? Answered.",
+          "Ready to create something worth watching?"
+        ],
+        "h3": [
+          "Podcast Recording",
+          "Video Content",
+          "LIVE EDITING",
+          "Corporate Content",
+          "Live Streaming",
+          "VIP Hospitality",
+          "The Green Room Experience",
+          "Ex-BBC/Sky Broadcast Cameras",
+          "Pro Audio Chain",
+          "Two Studios",
+          "LIVE EDITING",
+          "Cave Studio",
+          "Studio One",
+          "Content Retainer",
+          "The Content Engine",
+          "Get the free template",
+          "Where are you located?",
+          "What equipment do you have?",
+          "How many people can you accommodate?",
+          "What's included in the session price?",
+          "Can I see the studio before booking?",
+          "Do you offer remote recording?"
+        ],
+        "h4": [
+          "Studio",
+          "Contact"
+        ],
+        "h5": [],
+        "h6": []
+      },
+      "internal_links": [
+        "/resources",
+        "mailto:hello@streamtoday.co.uk",
+        "/terms",
+        "/about",
+        "https://linkedin.com/company/streamtoday",
+        "/pricing",
+        "/",
+        "https://twitter.com/streamtoday",
+        "/book",
+        "/privacy",
+        "/contact",
+        "/blog",
+        "https://instagram.com/streamtoday",
+        "/services"
+      ],
+      "external_links": [
+        "https://wa.me/447763741309"
+      ],
+      "images": [
+        {
+          "src": "/_next/image?url=%2Fimages%2Fstudio-hero-1.jpg&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "StreamToday Nottingham Studio",
+          "width": "",
+          "height": ""
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fhospitality.jpg&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "StreamToday Hospitality",
+          "width": "",
+          "height": ""
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fgreen-room-1.jpg&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "Green Room",
+          "width": "",
+          "height": ""
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fgreen-room-2.jpg&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "Lounge Area",
+          "width": "",
+          "height": ""
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fgreen-room-3.jpg&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "Studio Entrance",
+          "width": "",
+          "height": ""
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fgreen-room-3.jpg&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "Fireplace Detail",
+          "width": "",
+          "height": ""
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fstudio-hero-1.jpg&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "Studio One",
+          "width": "",
+          "height": ""
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fstudio-hero-2.jpg&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "Studio Equipment",
+          "width": "",
+          "height": ""
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fcave-studio.png&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "The Cave Studio",
+          "width": "",
+          "height": ""
+        },
+        {
+          "src": "/_next/image?url=%2Fimages%2Fgreen-room-1.jpg&w=3840&q=75&dpl=dpl_F5EoVL9CbgsApTfFkVp8mqcVR5o7",
+          "alt": "Green Room",
+          "width": "",
+          "height": ""
+        }
+      ],
+      "structured_data": [
+        {
+          "@context": "https://schema.org",
+          "@type": "PodcastStudio",
+          "name": "StreamToday Studios",
+          "image": "https://streamtoday.co.uk/logo.png",
+          "url": "https://streamtoday.co.uk",
+          "telephone": "+447763741309",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "20 Fletcher Gate",
+            "addressLocality": "Nottingham",
+            "postalCode": "NG1 2FZ",
+            "addressRegion": "East Midlands",
+            "addressCountry": "UK"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 52.9536,
+            "longitude": -1.1442
+          },
+          "priceRange": "\u00a3\u00a3\u00a3",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          "sameAs": [
+            "https://www.instagram.com/streamtoday_studios",
+            "https://www.linkedin.com/company/streamtoday-studios"
+          ]
+        }
+      ],
+      "og_data": {
+        "og:title": "StreamToday Studios | Stop Creating. Start Orchestrating.",
+        "og:description": "Professional 4K podcast and video studio in Nottingham. Walk out with finished content.",
+        "og:image": null,
+        "og:url": "https://streamtoday.co.uk",
+        "og:type": "website"
+      },
+      "twitter_data": {
+        "twitter:title": "StreamToday Studios | Stop Creating. Start Orchestrating.",
+        "twitter:description": "Professional 4K podcast and video studio in Nottingham. Walk out with finished content.",
+        "twitter:image": null,
+        "twitter:card": "summary"
+      },
+      "schema_types": [
+        "PodcastStudio"
+      ],
+      "errors": []
+    }
+  ]
+}
