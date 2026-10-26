@@ -57,7 +57,7 @@ export default function ReferralPage() {
             Refer a friend to StreamToday
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            If you attended a Family Keepsake session, tell someone who would love it too. 
+            If you have been to a Family Keepsake session, tell someone who would love it too. 
             When your group hits 10 referrals, everyone gets 10% off.
           </p>
         </div>

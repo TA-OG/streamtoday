@@ -5,8 +5,8 @@ import { Check, ArrowRight, Play, Clock, Users, Camera } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Family Keepsake Recording Nottingham | Record Their Voice Forever",
-  description: "Sit down with the people you love and record their stories, their voice, their laugh. A keepsake film you will watch again and again. From £150. Nottingham Lace Market.",
+  title: "Family Keepsake Recording Nottingham | Record Their Stories on Film",
+  description: "Sit down with the people you love and record their stories, their voice, their laugh. A keepsake film you will watch again and again. Family video recording studio in Nottingham Lace Market. From £150.",
   alternates: { canonical: "/keepsakes" },
 };
 
@@ -15,14 +15,14 @@ export default function KeepsakesPage() {
     <main className="min-h-screen">
       <Navigation />
 
-      {/* Hero — Emotional, Dark, Direct */}
+      {/* Hero */}
       <section className="relative pt-32 pb-24 bg-black text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
         </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <p className="text-red-500 font-bold tracking-widest uppercase text-sm mb-6">
-            Family Keepsakes — Nottingham
+            Family Keepsakes — Nottingham Lace Market
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] mb-8">
             The voice you can never<br />
@@ -30,10 +30,10 @@ export default function KeepsakesPage() {
             <span className="block text-red-600 mt-2">Unless you record it now.</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed mb-10">
-            One day, the stories, the laugh, the way they say your name — they will be gone. 
-            Not lost to tragedy. Just lost to time. Sit down together in our Nottingham studio. 
-            Ask the questions you have always meant to ask. Leave with a film you will watch 
-            at every Christmas to come.
+            One day the stories will be gone. Not through tragedy. Just through time. 
+            The laugh. The way they say your name. The answer to a question you never asked.
+            We sit you down together at our studio on Fletcher Gate — you, your family, and a microphone. 
+            Two hours later you have a film. Not a memory. A film.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -52,62 +52,62 @@ export default function KeepsakesPage() {
         </div>
       </section>
 
-      {/* The Regret Section — Behavioural Economics Hook */}
+      {/* The Real Problem */}
       <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-black mb-8 leading-tight">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-5xl font-black text-black mb-8 leading-tight text-center">
             You will not regret spending £150.<br />
             You will regret not doing it.
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-12">
-            Everyone thinks they have time. Then they do not. We have never had a client 
-            say, "I wish I had waited." We have had plenty say, "I wish I had done this 
-            while they were still here."
+          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto mb-12 text-center">
+            Everyone thinks they have time. Then they don't. We have never had a client 
+            say "I wish I'd waited." We have had plenty say "I wish I'd done this while Mum was still here."
           </p>
-          <div className="grid md:grid-cols-3 gap-8 text-left">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 bg-gray-50">
               <p className="text-4xl font-black text-red-600 mb-4">01</p>
               <h3 className="text-xl font-bold mb-3">The stories disappear</h3>
               <p className="text-gray-600">
-                Every family has stories that only one person knows. When that person goes, 
-                the stories go with them. A recording is the only way to keep them.
+                Every family has that one person who holds the history. How they met. What happened in '74. 
+                The thing nobody else knows. When they go, those stories go with them. A recording is the only way to keep them.
               </p>
             </div>
             <div className="p-8 bg-gray-50">
               <p className="text-4xl font-black text-red-600 mb-4">02</p>
               <h3 className="text-xl font-bold mb-3">The voice is everything</h3>
               <p className="text-gray-600">
-                Photos show you what someone looked like. A film lets you hear them laugh, 
-                pause, get emotional. It is the closest thing to having them in the room.
+                Photos show you what someone looked like. A film lets you hear them laugh, pause, get emotional. 
+                It is the closest thing to having them in the room. Your grandchildren will hear them laugh. 
+                Even if they never met.
               </p>
             </div>
             <div className="p-8 bg-gray-50">
               <p className="text-4xl font-black text-red-600 mb-4">03</p>
-              <h3 className="text-xl font-bold mb-3">Your children will thank you</h3>
+              <h3 className="text-xl font-bold mb-3">You can't get this back</h3>
               <p className="text-gray-600">
-                Your grandchildren may never meet their great-grandparents. But they can 
-                hear them. They can know them. That is a gift that compounds across generations.
+                You can buy another scarf. Another gadget. Another meal out. You cannot buy back a conversation 
+                that never happened. £150 is not a lot for something that grows more valuable every year.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works — Simple, Reassuring */}
+      {/* How It Works */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-black text-black mb-4 text-center">
-            How it works
+            How a family keepsake session works
           </h2>
           <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            No performance needed. No tech knowledge. Just turn up and talk.
+            No performance needed. No tech knowledge. You don't even need to know what to ask — we give you the questions. Just turn up and talk.
           </p>
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { icon: Clock, title: "Book", desc: "Pick your package and a date. We send you a Get Ready Guide with questions." },
-              { icon: Camera, title: "Bring photos", desc: "Gather the photos you want woven into the film. Physical prints or digital — both work." },
-              { icon: Users, title: "Record", desc: "Sit down together in our studio. We guide the conversation so it feels natural, not forced." },
-              { icon: Play, title: "Keep forever", desc: "Your edited film arrives within 7 days. Download it, share it, treasure it." },
+              { icon: Clock, title: "Book", desc: "Pick your package and a date. We send you a Get Ready Guide with 34 interview questions tailored for grandparents, parents, couples and siblings." },
+              { icon: Camera, title: "Bring photos", desc: "Dig out the old prints, the Polaroids, the album pages falling apart. We scan them and weave them into your film. Digital works too." },
+              { icon: Users, title: "Record", desc: "Sit down together in our Lace Market studio. We guide the conversation so it feels natural — like a chat in your living room, but with proper microphones." },
+              { icon: Play, title: "Keep forever", desc: "Your edited film lands within 7 days. Private download link. Watch it at Christmas. At weddings. When you need to hear their voice." },
             ].map((step) => (
               <div key={step.title} className="text-center">
                 <div className="w-16 h-16 bg-black flex items-center justify-center mx-auto mb-6">
@@ -121,34 +121,32 @@ export default function KeepsakesPage() {
         </div>
       </section>
 
-      {/* Packages — Clear, No Surprises */}
+      {/* Packages */}
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-black text-black mb-4 text-center">
-            Choose your session
+            Family keepsake packages
           </h2>
           <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            Both packages include the full studio experience, guided interview, photo inclusion 
-            and edited film. No hidden costs.
+            Both packages include the full studio session, guided interview, photo scanning, professional audio and video recording, and the edited film. No hidden costs. No upsells.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Package 1 */}
             <div className="relative p-8 lg:p-10 border-2 border-gray-200 bg-white">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold mb-2">Family Circle</h3>
-                <p className="text-gray-600">Up to 4 people &middot; 2 hours</p>
+                <p className="text-gray-600">Up to 4 people · 2 hours · Nottingham studio</p>
               </div>
               <div className="mb-8">
-                <span className="text-5xl font-bold">&pound;150</span>
+                <span className="text-5xl font-bold">£150</span>
                 <span className="text-gray-600"> total</span>
               </div>
               <ul className="space-y-4 mb-10">
                 {[
-                  "Private studio session in Nottingham Lace Market",
-                  "Professional audio & video recording",
-                  "Bring your photos — we include them in the film",
-                  "Guided interview with question cards",
+                  "Private studio session at 20 Fletcher Gate, Nottingham Lace Market",
+                  "Professional audio and 4K video recording",
+                  "Your photos scanned and included in the film",
+                  "Guided interview with 34 question prompts",
                   "Edited keepsake film delivered within 7 days",
                   "Private download link to share with family",
                 ].map((f) => (
@@ -166,7 +164,6 @@ export default function KeepsakesPage() {
               </Link>
             </div>
 
-            {/* Package 2 */}
             <div className="relative p-8 lg:p-10 border-2 border-black shadow-xl bg-white">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                 <span className="bg-black text-white px-4 py-1 text-sm font-medium">
@@ -175,18 +172,18 @@ export default function KeepsakesPage() {
               </div>
               <div className="mb-6">
                 <h3 className="text-2xl font-bold mb-2">Extended Family</h3>
-                <p className="text-gray-600">Up to 6 people &middot; 2 hours</p>
+                <p className="text-gray-600">Up to 6 people · 2 hours · Nottingham studio</p>
               </div>
               <div className="mb-8">
-                <span className="text-5xl font-bold">&pound;225</span>
+                <span className="text-5xl font-bold">£225</span>
                 <span className="text-gray-600"> total</span>
               </div>
               <ul className="space-y-4 mb-10">
                 {[
-                  "Larger studio space in Nottingham Lace Market",
-                  "Professional audio & video recording",
-                  "Bring your photos — we include them in the film",
-                  "Guided interview with question cards",
+                  "Larger studio space at 20 Fletcher Gate, Nottingham Lace Market",
+                  "Professional audio and 4K video recording",
+                  "Your photos scanned and included in the film",
+                  "Guided interview with 34 question prompts",
                   "Edited keepsake film delivered within 7 days",
                   "Private download link to share with family",
                 ].map((f) => (
@@ -207,21 +204,21 @@ export default function KeepsakesPage() {
         </div>
       </section>
 
-      {/* Referral Section */}
+      {/* Referral */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-black mb-6">
             10 referrals. 10% off.
           </h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            After your session, tell your friends. If your group generates 10 referrals 
-            who submit their details, everyone in your party gets 10% refunded.
+            After your session, tell your mates. If your group generates 10 referrals who submit their details, 
+            everyone in your party gets 10% refunded. Simple.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 text-left mb-8">
             <div className="p-6 bg-white border border-gray-200">
               <span className="text-3xl font-black text-red-600">1</span>
               <h4 className="font-bold mt-2 mb-2">Record</h4>
-              <p className="text-gray-600 text-sm">Complete your keepsake session.</p>
+              <p className="text-gray-600 text-sm">Do your keepsake session. Have the conversation.</p>
             </div>
             <div className="p-6 bg-white border border-gray-200">
               <span className="text-3xl font-black text-red-600">2</span>
@@ -231,26 +228,24 @@ export default function KeepsakesPage() {
             <div className="p-6 bg-white border border-gray-200">
               <span className="text-3xl font-black text-red-600">3</span>
               <h4 className="font-bold mt-2 mb-2">Save</h4>
-              <p className="text-gray-600 text-sm">Hit 10 as a group and we refund 10%.</p>
+              <p className="text-gray-600 text-sm">Hit 10 as a group and we refund 10% of your session.</p>
             </div>
           </div>
           <p className="text-sm text-gray-500">
-            The 10 referrals count for your whole party, not per person. 
-            Referrals must be new enquiries.
+            The 10 referrals count for your whole party, not per person. Referrals must be genuine new enquiries.
           </p>
         </div>
       </section>
 
-      {/* Voucher Teaser — Separate Funnel */}
+      {/* Voucher Teaser */}
       <section className="py-24 bg-black text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-black mb-6">
             Not sure when they are free?
           </h2>
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-            Buy a gift voucher and let them choose their own date. Delivered instantly 
-            by email. Valid for 12 months. The gift they did not know they needed — until 
-            they receive it.
+            Buy a gift voucher and let them choose their own date. Delivered instantly by email. 
+            Valid for 12 months. The gift they did not know they needed — until they receive it.
           </p>
           <Link
             href="/keepsakes/voucher"
@@ -262,15 +257,14 @@ export default function KeepsakesPage() {
         </div>
       </section>
 
-      {/* Final CTA — Hard Emotive Close */}
+      {/* Final CTA */}
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
             Ask the questions you have<br />always meant to ask.
           </h2>
           <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            While you still can. While they are still here. While the conversation 
-            is easy and the room is warm.
+            While you still can. While they are still here. While the conversation is easy and the room is warm.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

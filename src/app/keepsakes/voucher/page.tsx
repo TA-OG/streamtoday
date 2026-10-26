@@ -5,34 +5,34 @@ import { Gift, Mail, Clock, Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Gift Voucher | Family Keepsake Recording | StreamToday",
-  description: "Buy a Family Keepsake recording session as a gift. Delivered instantly by email. Valid for 12 months. From £150. Nottingham.",
+  title: "Gift Voucher | Family Keepsake Recording Session | Nottingham",
+  description: "Buy a Family Keepsake recording session as a gift voucher. Delivered instantly by email. Valid for 12 months. From £150. Nottingham Lace Market studio.",
   alternates: { canonical: "/keepsakes/voucher" },
 };
 
 const vouchers = [
   {
     name: "Family Circle Voucher",
-    for: "Up to 4 people · 2 hours",
+    for: "Up to 4 people · 2 hours · Nottingham studio",
     price: "150",
     features: [
       "Valid for 12 months from purchase",
       "Delivered instantly by email",
       "Printable gift card included",
       "Recipient books their own date",
-      "Fully transferable",
+      "Fully transferable to someone else",
     ],
   },
   {
     name: "Extended Family Voucher",
-    for: "Up to 6 people · 2 hours",
+    for: "Up to 6 people · 2 hours · Nottingham studio",
     price: "225",
     features: [
       "Valid for 12 months from purchase",
       "Delivered instantly by email",
       "Printable gift card included",
       "Recipient books their own date",
-      "Fully transferable",
+      "Fully transferable to someone else",
     ],
   },
 ];
@@ -42,7 +42,6 @@ export default function VoucherPage() {
     <main className="min-h-screen">
       <Navigation />
 
-      {/* Hero */}
       <section className="pt-32 pb-16 bg-black text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Gift className="w-12 h-12 text-red-600 mx-auto mb-6" />
@@ -56,11 +55,10 @@ export default function VoucherPage() {
         </div>
       </section>
 
-      {/* Why a Voucher */}
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-black text-black mb-12 text-center">
-            Why this gift works
+            Why this gift actually works
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -70,7 +68,7 @@ export default function VoucherPage() {
               <h3 className="text-xl font-bold mb-3">Instant delivery</h3>
               <p className="text-gray-600">
                 Ordered at 11pm on Christmas Eve? Delivered by email in minutes. 
-                Print it, wrap it, done.
+                Print it, wrap it, done. No postage. No delay.
               </p>
             </div>
             <div className="text-center">
@@ -80,7 +78,7 @@ export default function VoucherPage() {
               <h3 className="text-xl font-bold mb-3">12 months to use</h3>
               <p className="text-gray-600">
                 No pressure. They book when the whole family is free. 
-                Summer reunions, milestone birthdays, any Tuesday.
+                Summer reunions, milestone birthdays, any Tuesday that works.
               </p>
             </div>
             <div className="text-center">
@@ -90,21 +88,20 @@ export default function VoucherPage() {
               <h3 className="text-xl font-bold mb-3">Fully transferable</h3>
               <p className="text-gray-600">
                 If their plans change, they can pass it to someone else. 
-                The value never expires.
+                The value never expires. It is not wasted.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Voucher Packages */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-black text-black mb-4 text-center">
             Choose your voucher
           </h2>
           <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-            Select the package that fits their family. We handle the rest.
+            Select the package that fits their family. We handle everything else.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -135,7 +132,6 @@ export default function VoucherPage() {
             ))}
           </div>
 
-          {/* Bulk / Custom */}
           <div className="mt-16 text-center">
             <p className="text-gray-600 mb-4">
               Want to buy multiple vouchers for staff, clients or a group?
@@ -151,7 +147,6 @@ export default function VoucherPage() {
         </div>
       </section>
 
-      {/* Who It Is For */}
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-black text-black mb-12 text-center">
@@ -159,11 +154,11 @@ export default function VoucherPage() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-6">
             {[
-              { who: "Parents who have everything", why: "They do not need another scarf. They need their parents' voices saved." },
-              { who: "Grandparents as a family gift", why: "Pool together. Give them a session where they tell their story to the whole family." },
-              { who: "New parents", why: "Record the grandparents while the baby is small. The film becomes a time capsule." },
-              { who: "Anniversaries", why: "25, 40, 50 years. The story of how it started, told by the people who lived it." },
-              { who: "Siblings scattered across the country", why: "A reason to gather. A film to watch when you are apart again." },
+              { who: "Parents who have everything", why: "They do not need another scarf. They need their parents' voices saved before they are gone." },
+              { who: "Grandparents as a family gift", why: "Pool together. Give them a session where they tell their story to the whole family while everyone is still here." },
+              { who: "New parents", why: "Record the grandparents while the baby is small. The film becomes a time capsule the child will watch when they are older." },
+              { who: "Anniversaries", why: "25, 40, 50 years. The story of how it started, told by the people who lived it. Not a card. A film." },
+              { who: "Siblings scattered across the country", why: "A reason to gather in Nottingham. A film to watch when you are apart again." },
               { who: "Anyone you love", why: "Because one day you will wish you had this. And you will be glad you do." },
             ].map((item) => (
               <div key={item.who} className="p-6 bg-gray-50">
@@ -175,7 +170,6 @@ export default function VoucherPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-24 bg-black text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-5xl font-black mb-6">
