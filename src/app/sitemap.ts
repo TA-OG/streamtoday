@@ -21,6 +21,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/professional-services",
     "/recruitment-agencies",
     "/tech-saas",
+    "/keepsakes",
+    "/keepsakes/guide",
+    "/keepsakes/voucher",
+    "/keepsakes/referral",
     "/blog/podcast-studio-hire-nottingham",
     "/blog/how-much-does-podcast-studio-cost-nottingham",
   ];
