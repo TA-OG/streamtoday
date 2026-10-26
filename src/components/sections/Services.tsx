@@ -1,5 +1,4 @@
-import { Mic, Video, Users, Radio, Coffee, Scissors } from "lucide-react";
-import Image from "next/image";
+import { Mic, Video, Users, Radio, Scissors } from "lucide-react";
 
 const services = [
   {
@@ -31,12 +30,6 @@ const services = [
     title: "Live Streaming",
     description: "Multi-platform live streaming with professional production values. Go live to YouTube, LinkedIn, or your own platform.",
     features: ["Multi-platform simulcast", "Live graphics", "Chat integration"],
-  },
-  {
-    icon: Coffee,
-    title: "VIP Hospitality",
-    description: "Full green room access, premium refreshments, and a private lounge. Built for high-profile guests and long sessions.",
-    features: ["Private Lounge", "Drinks & Catering", "Secure/Private Entry"],
   },
 ];
 
@@ -78,47 +71,6 @@ export function Services() {
               </ul>
             </div>
           ))}
-        </div>
-
-        {/* Green Room Highlight */}
-        <div className="mt-20 grid lg:grid-cols-2 gap-10 items-center bg-black text-white rounded-sm overflow-hidden">
-            <div className="p-10 lg:p-20">
-                 <h3 className="text-3xl font-black mb-6">The Green Room Experience</h3>
-                 <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                    We know that the best content happens when people feel at ease. Our studio features an 
-                    intimate lounge with exposed brick arches and warm lighting — the perfect space for 
-                    briefing guests or relaxing between takes. 
-                 </p>
-                 <div className="flex flex-wrap gap-4 mb-10 text-sm font-bold uppercase tracking-widest text-red-600">
-                    <span>Drinks Station</span>
-                    <span className="text-gray-700">/</span>
-                    <span>Catering Available</span>
-                    <span className="text-gray-700">/</span>
-                    <span>Private & Secure</span>
-                 </div>
-                 <div className="aspect-video relative rounded-sm overflow-hidden">
-                     <Image 
-                        src="/images/hospitality.jpg" 
-                        alt="StreamToday Hospitality" 
-                        fill 
-                        className="object-cover"
-                     />
-                 </div>
-            </div>
-            <div className="grid grid-cols-2 gap-2 p-2 h-full min-h-[400px]">
-                 <div className="relative h-full">
-                    <Image src="/images/green-room-1.jpg" alt="Green Room" fill className="object-cover" />
-                 </div>
-                 <div className="relative h-full">
-                    <Image src="/images/green-room-2.jpg" alt="Lounge Area" fill className="object-cover" />
-                 </div>
-                 <div className="relative h-full">
-                    <Image src="/images/green-room-3.jpg" alt="Studio Entrance" fill className="object-cover" />
-                 </div>
-                 <div className="relative h-full">
-                    <Image src="/images/green-room-3.jpg" alt="Fireplace Detail" fill className="object-cover" style={{objectPosition: 'center right'}} />
-                 </div>
-            </div>
         </div>
       </div>
     </section>

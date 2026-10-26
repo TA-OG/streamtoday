@@ -88,8 +88,8 @@ export function Studio() {
               </div>
               <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-                  src="/images/green-room-1.jpg" 
-                  alt="Green Room" 
+                  src="/images/studio-hero-2.jpg" 
+                  alt="Studio Detail" 
                   fill
                   className="object-cover"
                 />

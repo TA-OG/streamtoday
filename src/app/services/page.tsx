@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Podcast & Video Production Services Nottingham | StreamToday",
-  description: "Professional podcast recording, video production, live streaming, and social content creation in Nottingham. From £299 per session. Live-editing included.",
+  description: "Professional podcast recording, video production, live streaming, and social content creation in Nottingham. Live-editing included.",
   alternates: {
     canonical: "/services",
   },
@@ -18,7 +18,6 @@ const services = [
     icon: Mic,
     title: "Podcast Recording",
     description: "Professional podcast recording for up to 4 guests. Multi-track audio, 4K video optional, and same-day file delivery.",
-    price: "From £299",
     image: "/images/cave-studio.png",
     features: [
       "Acoustically treated space",
@@ -32,7 +31,6 @@ const services = [
     icon: Video,
     title: "Video Production",
     description: "YouTube-ready productions with cinema-grade cameras, professional lighting, and full post-production.",
-    price: "From £399",
     image: "/images/studio-hero-1.jpg",
     features: [
       "Sony FX6 / Blackmagic 6K",
@@ -46,7 +44,6 @@ const services = [
     icon: Clapperboard,
     title: "Social Media Content",
     description: "Batch-shoot a month of content in one session. Optimised for TikTok, Instagram Reels, and YouTube Shorts.",
-    price: "From £349",
     image: "/images/studio-hero-2.jpg",
     features: [
       "Vertical + horizontal formats",
@@ -60,8 +57,7 @@ const services = [
     icon: Users,
     title: "Corporate Content",
     description: "Executive interviews, thought leadership, and internal communications. Professional without the corporate stiffness.",
-    price: "From £499",
-    image: "/images/green-room-2.jpg",
+    image: "/images/hospitality.jpg",
     features: [
       "Branded backdrops",
       "Teleprompter available",
@@ -74,7 +70,6 @@ const services = [
     icon: Radio,
     title: "Live Streaming",
     description: "Multi-platform live streaming with professional production values. Go live to your audience wherever they are.",
-    price: "From £599",
     image: "/images/hero-dark.jpg",
     features: [
       "Multi-platform simulcast",
@@ -88,8 +83,7 @@ const services = [
     icon: Sparkles,
     title: "Post-Production",
     description: "Full editing suite for projects shot with us or elsewhere. Colour, sound design, and delivery in all formats.",
-    price: "From £199",
-    image: "/images/green-room-3.jpg",
+    image: "/images/studio-hero-1.jpg",
     features: [
       "Professional editing",
       "Colour correction & grading",
@@ -142,7 +136,6 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                   <div className="flex items-center gap-6">
-                    <span className="text-2xl font-bold">{service.price}</span>
                     <Link
                       href="/book"
                       className="inline-flex items-center font-semibold hover:underline"

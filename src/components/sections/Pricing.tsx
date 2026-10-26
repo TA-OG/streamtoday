@@ -46,7 +46,7 @@ const plans = [
       "3 sessions per month",
       "Full post-production & editing",
       "6 social media clips (Reels/Shorts)",
-      "Custom branded backgrounds",
+      "Customisable background for branding",
       "Dedicated account manager",
       "48-hour turnaround guaranteed",
     ],
@@ -60,7 +60,7 @@ const plans = [
     period: "/month",
     description: "The High-Impact Content Engine. A producer, a researcher, and total feed dominance.",
     features: [
-      "3 sessions per month (Studio One or Cave)",
+      "3 sessions per month",
       "Dedicated Producer & Researcher",
       "Post-management & scheduling",
       "Long-form to short-form waterfall",
@@ -131,7 +131,7 @@ export function Pricing() {
               {/* Deposit notice */}
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded">
                 <p className="text-xs text-red-800 font-medium">
-                  Deposit required. Forfeited on no-show or cancellations within 48 hours. Credited to your session or subscription.
+                  Deposit required. Credited to your session or subscription. Forfeited on no-show or cancellations within 48 hours.
                 </p>
               </div>
 
