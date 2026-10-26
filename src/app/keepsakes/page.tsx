@@ -3,6 +3,7 @@ import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
 import { ArrowRight, Snowflake, Gift, Heart, Camera, Mic, Mail, Monitor, Film, Check } from "lucide-react";
 import Link from "next/link";
+import { CheckoutButton } from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
   title: "Christmas Family Keepsake Gift | Record Your Family's Stories | Nottingham",
@@ -141,9 +142,12 @@ export default function KeepsakesPage() {
                 ))}
               </div>
 
-              <Link href="/book" className="block text-center py-4 font-bold bg-green-700 text-white hover:bg-green-800 rounded-lg transition-colors">
+              <CheckoutButton
+                priceKey="family_circle"
+                className="w-full text-center py-4 font-bold bg-green-700 text-white hover:bg-green-800 rounded-lg transition-colors"
+              >
                 Book Family Circle
-              </Link>
+              </CheckoutButton>
             </div>
 
             {/* Extended Family */}
@@ -174,9 +178,12 @@ export default function KeepsakesPage() {
                 ))}
               </div>
 
-              <Link href="/book" className="block text-center py-4 font-bold bg-red-700 text-white hover:bg-red-800 rounded-lg transition-colors">
+              <CheckoutButton
+                priceKey="extended_family"
+                className="w-full text-center py-4 font-bold bg-red-700 text-white hover:bg-red-800 rounded-lg transition-colors"
+              >
                 Book Extended Family
-              </Link>
+              </CheckoutButton>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
 import { Gift, Mail, Clock, Check, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { CheckoutButton } from "@/components/CheckoutButton";
 
 export const metadata: Metadata = {
   title: "Gift Voucher | Family Keepsake Recording Session | Nottingham",
@@ -122,12 +123,12 @@ export default function VoucherPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact?subject=Gift%20Voucher%20Purchase"
-                  className="block text-center py-4 font-semibold transition-colors bg-red-600 text-white hover:bg-red-700"
+                <CheckoutButton
+                  priceKey={v.name.includes("Extended") ? "voucher_extended_family" : "voucher_family_circle"}
+                  className="w-full text-center py-4 font-semibold transition-colors bg-red-600 text-white hover:bg-red-700"
                 >
                   Buy This Voucher
-                </Link>
+                </CheckoutButton>
               </div>
             ))}
           </div>
