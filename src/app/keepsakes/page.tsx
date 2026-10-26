@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
-import { Check, ArrowRight, Play, Clock, Users, Camera, Snowflake, Gift, Heart } from "lucide-react";
+import { ArrowRight, Snowflake, Gift, Heart, Camera, Mic, Mail, Monitor, Film, Check } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -15,217 +15,166 @@ export default function KeepsakesPage() {
     <main className="min-h-screen">
       <Navigation />
 
-      {/* Hero — Warm, Christmas, Inviting */}
-      <section className="relative pt-32 pb-24 bg-gradient-to-b from-green-950 via-green-900 to-red-950 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMyIvPjwvc3ZnPg==')]" />
-        </div>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Snowflake className="w-5 h-5 text-amber-400" />
-            <p className="text-amber-400 font-bold tracking-widest uppercase text-sm">
-              This Christmas — Nottingham Lace Market
-            </p>
-            <Snowflake className="w-5 h-5 text-amber-400" />
+      {/* HERO */}
+      <section className="relative pt-32 pb-20 bg-gradient-to-b from-green-950 via-green-900 to-red-950 text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_center,white_1px,transparent_1px)] bg-[length:32px_32px]" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+          <div className="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-white/10 rounded-full border border-white/10">
+            <Snowflake className="w-4 h-4 text-amber-400" />
+            <span className="text-amber-400 font-bold tracking-widest uppercase text-xs">This Christmas — Nottingham Lace Market</span>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.95] mb-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-black leading-[0.95] mb-6">
             The Christmas gift<br />
             your family opens<br />
             <span className="text-amber-400">again and again.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed mb-10 text-center mx-auto">
-            This Christmas, while the whole family is finally in one room, do something 
-            that lasts longer than the turkey. Sit down together in our Nottingham studio. 
-            Share the stories, the laughs, the memories that make your family yours. 
-            Leave with a film you will watch together every Christmas to come.
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            While the whole family is finally in one room, do something that lasts longer than the turkey. 
+            Sit down together in our Nottingham studio and leave with a film you will watch every Christmas to come.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/book"
-              className="px-8 py-4 bg-red-700 hover:bg-red-800 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm shadow-lg shadow-red-900/50"
-            >
-              Book Your Family Session
+            <Link href="/book" className="px-8 py-4 bg-red-700 hover:bg-red-800 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">
+              Book Your Session
             </Link>
-            <Link
-              href="/keepsakes/voucher"
-              className="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm shadow-lg shadow-amber-900/50"
-            >
+            <Link href="/keepsakes/voucher" className="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">
               Buy a Gift Voucher
             </Link>
           </div>
         </div>
       </section>
 
-      {/* The Christmas Opportunity */}
-      <section className="py-24 bg-red-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Gift className="w-6 h-6 text-red-700" />
-            <Gift className="w-6 h-6 text-red-700" />
-            <Gift className="w-6 h-6 text-red-700" />
-          </div>
-          <h2 className="text-3xl md:text-5xl font-black text-red-950 mb-8 leading-tight">
-            While everyone is home for Christmas,<br />
-            gather the voices of your family.
-          </h2>
-          <p className="text-xl text-red-900/70 leading-relaxed max-w-2xl mx-auto mb-12">
-            Christmas is when the generations come together. The kids home from uni. 
-            The cousins down from Manchester. Grandad in his usual chair. 
-            It is the one time of year when everyone is in the same room. 
-            That is the moment to capture.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            <div className="p-8 bg-white rounded-lg shadow-sm border border-red-100">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <Heart className="w-6 h-6 text-green-700" />
+      {/* THREE BOXES — THE CORE */}
+      <section className="py-20 bg-red-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="group p-8 bg-white rounded-xl border border-red-100 hover:border-red-200 transition-all hover:shadow-lg">
+              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Heart className="w-7 h-7 text-green-700" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-red-950">The stories that bind you</h3>
-              <p className="text-red-900/70">
-                Every family has stories that only one person knows. How your parents met. 
-                What Nan did during the war. The time Uncle Dave got lost in Blackpool. 
+              <h3 className="text-xl font-black text-red-950 mb-3">The stories that bind you</h3>
+              <p className="text-red-900/70 leading-relaxed">
+                How your parents met. What Nan did during the war. The time Uncle Dave got lost in Blackpool. 
                 Record them now, while the storyteller is right there in front of you.
               </p>
             </div>
-            <div className="p-8 bg-white rounded-lg shadow-sm border border-red-100">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <Camera className="w-6 h-6 text-green-700" />
+
+            <div className="group p-8 bg-white rounded-xl border border-red-100 hover:border-red-200 transition-all hover:shadow-lg">
+              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Camera className="w-7 h-7 text-green-700" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-red-950">More than photographs</h3>
-              <p className="text-red-900/70">
-                Photos show you what people looked like. A film lets you hear them laugh, 
-                pause, tell a story properly. It is the closest thing to having them in the room 
-                on every Christmas to come. Your grandchildren will hear their great-grandparents laugh.
+              <h3 className="text-xl font-black text-red-950 mb-3">More than photographs</h3>
+              <p className="text-red-900/70 leading-relaxed">
+                Photos show you what people looked like. A film lets you hear them laugh, pause, tell a story properly. 
+                Your grandchildren will hear their great-grandparents laugh. Even if they never met.
               </p>
             </div>
-            <div className="p-8 bg-white rounded-lg shadow-sm border border-red-100">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <Gift className="w-6 h-6 text-green-700" />
+
+            <div className="group p-8 bg-white rounded-xl border border-red-100 hover:border-red-200 transition-all hover:shadow-lg">
+              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <Gift className="w-7 h-7 text-green-700" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-red-950">The gift that grows</h3>
-              <p className="text-red-900/70">
-                Most Christmas presents are forgotten by Boxing Day. This one gets more valuable 
-                every year. Watch it on Christmas morning. Watch it at weddings. Watch it when 
-                someone new joins the family and needs to know where they came from.
+              <h3 className="text-xl font-black text-red-950 mb-3">The gift that grows</h3>
+              <p className="text-red-900/70 leading-relaxed">
+                Most presents are forgotten by Boxing Day. This one gets more valuable every year. 
+                Watch it at Christmas. At weddings. When someone new joins the family and needs to know where they came from.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works — Christmas Edition */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-red-950 mb-4">
-              How your Christmas keepsake session works
-            </h2>
-            <p className="text-center text-red-900/70 max-w-2xl mx-auto">
-              No performance needed. No tech knowledge. Just turn up with your family 
-              and we will guide the rest. It feels like a chat in your living room, 
-              but with proper microphones and someone who knows what questions to ask.
-            </p>
+      {/* THE EXPERIENCE — VISUAL STRIP */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-black text-red-950">What happens on the day</h2>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: Clock, title: "Book", desc: "Pick your package and a date over the Christmas period. We send you a Get Ready Guide with 34 question ideas." },
-              { icon: Camera, title: "Bring photos", desc: "Dig out the old prints, the Polaroids, the album pages falling apart. We scan them and weave them into your family film." },
-              { icon: Users, title: "Record", desc: "Sit down together in our warm studio on Fletcher Gate. We guide the conversation so it feels natural and fun." },
-              { icon: Play, title: "Watch together", desc: "Your edited film lands within 7 days. Watch it together on Christmas Day. Then again next year. And the year after." },
+              { icon: Mail, label: "Email your photos", desc: "Send them ahead. We'll have them on screen." },
+              { icon: Mic, label: "Sit down together", desc: "Our studio on Fletcher Gate. Two hours. Just talk." },
+              { icon: Monitor, label: "Photos on screen", desc: "Your images appear as the stories are told." },
+              { icon: Film, label: "Receive your film", desc: "Edited and delivered within 7 days." },
             ].map((step) => (
-              <div key={step.title} className="text-center">
-                <div className="w-16 h-16 bg-red-700 flex items-center justify-center mx-auto mb-6 rounded-full">
-                  <step.icon className="w-8 h-8 text-white" />
+              <div key={step.label} className="text-center p-6 bg-gray-50 rounded-lg">
+                <div className="w-12 h-12 bg-red-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-red-950">{step.title}</h3>
-                <p className="text-red-900/70">{step.desc}</p>
+                <h4 className="font-bold text-red-950 mb-1">{step.label}</h4>
+                <p className="text-sm text-red-900/60">{step.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Packages — Christmas Gift Cards */}
-      <section className="py-24 bg-gradient-to-b from-green-50 to-red-50">
+      {/* PACKAGES — STYLISED, NOT A WALL OF TEXT */}
+      <section className="py-20 bg-gradient-to-b from-green-50 to-red-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-red-950 mb-4">
-              Choose your Christmas keepsake
-            </h2>
-            <p className="text-center text-red-900/70 max-w-2xl mx-auto">
-              Both packages include the full studio experience at 20 Fletcher Gate, 
-              guided interview, photo inclusion, and the edited film. 
-              No hidden costs. Just a Christmas gift your family will never forget.
-            </p>
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-black text-red-950 mb-3">Choose your Christmas keepsake</h2>
+            <p className="text-red-900/70">Both include the studio session, guided interview, on-screen photos, and edited film.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Package 1 */}
-            <div className="relative p-8 lg:p-10 border-2 border-green-200 bg-white rounded-lg">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2 text-red-950">Family Circle</h3>
-                <p className="text-red-900/70">Up to 4 people · 2 hours · Nottingham studio</p>
-              </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Family Circle */}
+            <div className="relative p-8 bg-white rounded-xl border-2 border-green-200">
+              <h3 className="text-2xl font-black text-red-950 mb-1">Family Circle</h3>
+              <p className="text-red-900/60 text-sm mb-6">Up to 4 people · 2 hours</p>
               <div className="mb-8">
-                <span className="text-5xl font-bold text-red-950">£150</span>
-                <span className="text-red-900/70"> total</span>
+                <span className="text-5xl font-black text-red-950">£150</span>
+                <span className="text-red-900/60"> total</span>
               </div>
-              <ul className="space-y-4 mb-10">
+
+              {/* Stylised feature grid */}
+              <div className="grid grid-cols-2 gap-3 mb-8">
                 {[
-                  "Private studio session at 20 Fletcher Gate, Nottingham Lace Market",
-                  "Professional audio and 4K video recording",
-                  "Your photos scanned and included in the film",
-                  "Guided interview with 34 question prompts",
-                  "Edited keepsake film delivered within 7 days",
-                  "Private download link to share with the whole family",
+                  { icon: Mic, text: "Guided interview" },
+                  { icon: Monitor, text: "Photos on screen" },
+                  { icon: Film, text: "Edited film · 7 days" },
+                  { icon: Check, text: "Private download" },
                 ].map((f) => (
-                  <li key={f} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-red-900/70">{f}</span>
-                  </li>
+                  <div key={f.text} className="flex items-center gap-2 p-3 bg-green-50 rounded-lg">
+                    <f.icon className="w-4 h-4 text-green-700 flex-shrink-0" />
+                    <span className="text-sm font-medium text-green-900">{f.text}</span>
+                  </div>
                 ))}
-              </ul>
-              <Link
-                href="/book"
-                className="block text-center py-4 font-semibold transition-colors bg-green-700 text-white hover:bg-green-800 rounded-sm"
-              >
+              </div>
+
+              <Link href="/book" className="block text-center py-4 font-bold bg-green-700 text-white hover:bg-green-800 rounded-lg transition-colors">
                 Book Family Circle
               </Link>
             </div>
 
-            {/* Package 2 */}
-            <div className="relative p-8 lg:p-10 border-2 border-red-700 bg-white rounded-lg shadow-xl">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <span className="bg-red-700 text-white px-4 py-1 text-sm font-medium rounded-full">
-                  Most Popular This Christmas
+            {/* Extended Family */}
+            <div className="relative p-8 bg-white rounded-xl border-2 border-red-700 shadow-xl">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span className="bg-red-700 text-white px-4 py-1 text-xs font-black uppercase tracking-wider rounded-full">
+                  Most Popular
                 </span>
               </div>
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2 text-red-950">Extended Family</h3>
-                <p className="text-red-900/70">Up to 6 people · 2 hours · Nottingham studio</p>
-              </div>
+              <h3 className="text-2xl font-black text-red-950 mb-1">Extended Family</h3>
+              <p className="text-red-900/60 text-sm mb-6">Up to 6 people · 2 hours</p>
               <div className="mb-8">
-                <span className="text-5xl font-bold text-red-950">£225</span>
-                <span className="text-red-900/70"> total</span>
+                <span className="text-5xl font-black text-red-950">£225</span>
+                <span className="text-red-900/60"> total</span>
               </div>
-              <ul className="space-y-4 mb-10">
+
+              <div className="grid grid-cols-2 gap-3 mb-8">
                 {[
-                  "Larger studio space at 20 Fletcher Gate, Nottingham Lace Market",
-                  "Professional audio and 4K video recording",
-                  "Your photos scanned and included in the film",
-                  "Guided interview with 34 question prompts",
-                  "Edited keepsake film delivered within 7 days",
-                  "Private download link to share with the whole family",
+                  { icon: Mic, text: "Guided interview" },
+                  { icon: Monitor, text: "Photos on screen" },
+                  { icon: Film, text: "Edited film · 7 days" },
+                  { icon: Check, text: "Private download" },
                 ].map((f) => (
-                  <li key={f} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-red-900/70">{f}</span>
-                  </li>
+                  <div key={f.text} className="flex items-center gap-2 p-3 bg-red-50 rounded-lg">
+                    <f.icon className="w-4 h-4 text-red-700 flex-shrink-0" />
+                    <span className="text-sm font-medium text-red-900">{f.text}</span>
+                  </div>
                 ))}
-              </ul>
-              <Link
-                href="/book"
-                className="block text-center py-4 font-semibold transition-colors bg-red-700 text-white hover:bg-red-800 rounded-sm"
-              >
+              </div>
+
+              <Link href="/book" className="block text-center py-4 font-bold bg-red-700 text-white hover:bg-red-800 rounded-lg transition-colors">
                 Book Extended Family
               </Link>
             </div>
@@ -233,96 +182,59 @@ export default function KeepsakesPage() {
         </div>
       </section>
 
-      {/* Gift Voucher Highlight */}
-      <section className="py-24 bg-red-900 text-white">
+      {/* GIFT VOUCHER — FULL WIDTH, PREMIUM */}
+      <section className="py-20 bg-red-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Gift className="w-8 h-8 text-amber-400" />
-            <Gift className="w-8 h-8 text-amber-400" />
+          <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 rounded-full border border-white/10">
+            <Gift className="w-4 h-4 text-amber-400" />
+            <span className="text-amber-400 font-bold tracking-widest uppercase text-xs">The Perfect Christmas Present</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black mb-6">
-            Not sure which date works for everyone?
+            Not sure which date works?<br />
+            <span className="text-amber-400">Buy a voucher.</span>
           </h2>
-          <p className="text-xl text-red-200 mb-10 max-w-2xl mx-auto">
-            Buy a gift voucher and let them choose their own date. Delivered instantly 
-            by email. Valid for 12 months. Print it, wrap it, put it under the tree. 
-            The gift they did not know they needed — until they open it.
+          <p className="text-lg text-red-200 max-w-xl mx-auto mb-10">
+            Delivered by email in minutes. Valid for 12 months. Print it, wrap it, put it under the tree.
           </p>
-          <Link
-            href="/keepsakes/voucher"
-            className="inline-flex items-center px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black uppercase tracking-widest transition-all rounded-sm shadow-lg shadow-black/30"
-          >
-            Buy a Christmas Gift Voucher
+          <Link href="/keepsakes/voucher" className="inline-flex items-center px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black uppercase tracking-widest transition-all rounded-sm">
+            Buy a Gift Voucher
             <ArrowRight className="ml-2" size={20} />
           </Link>
         </div>
       </section>
 
-      {/* The Christmas Gathering Angle */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-red-950 mb-6">
-            This Christmas, give them something that lasts.
-          </h2>
-          <p className="text-xl text-red-900/70 mb-10 max-w-2xl mx-auto">
-            We all spend money at Christmas. On food that is gone in a day. On presents 
-            that sit in drawers. This year, spend it on something your family will still 
-            be watching together in ten years. A film of your family, told by your family, 
-            for your family.
-          </p>
-          <div className="grid sm:grid-cols-3 gap-6 text-left">
-            <div className="p-6 bg-green-50 rounded-lg border border-green-100">
-              <h4 className="font-bold mb-2 text-green-900">For parents</h4>
-              <p className="text-green-800/70 text-sm">
-                They have everything. What they do not have is a professional film of their 
-                parents telling the stories they have heard a hundred times — captured properly.
-              </p>
-            </div>
-            <div className="p-6 bg-green-50 rounded-lg border border-green-100">
-              <h4 className="font-bold mb-2 text-green-900">For grandparents</h4>
-              <p className="text-green-800/70 text-sm">
-                Give them the stage. Let them tell their story to the whole family while 
-                everyone is there to hear it. The film becomes their legacy.
-              </p>
-            </div>
-            <div className="p-6 bg-green-50 rounded-lg border border-green-100">
-              <h4 className="font-bold mb-2 text-green-900">For the whole family</h4>
-              <p className="text-green-800/70 text-sm">
-                Pool together. Make it the family Christmas present. Something you all 
-                contribute to and all benefit from. Forever.
-              </p>
-            </div>
+      {/* WHO IS THIS FOR — TIGHT, VISUAL */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl md:text-3xl font-black text-red-950 text-center mb-10">Who is this for?</h2>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {[
+              { title: "For parents", text: "They have everything. What they don't have is a professional film of their parents telling the stories they've heard a hundred times — captured properly." },
+              { title: "For grandparents", text: "Give them the stage. Let them tell their story to the whole family while everyone is there to hear it. The film becomes their legacy." },
+              { title: "For the whole family", text: "Pool together. Make it the family Christmas present. Something you all contribute to and all benefit from. Forever." },
+            ].map((card) => (
+              <div key={card.title} className="p-6 bg-green-50 rounded-xl border border-green-100">
+                <h4 className="font-black text-green-900 mb-2">{card.title}</h4>
+                <p className="text-green-800/70 text-sm leading-relaxed">{card.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA — Warm Christmas Close */}
-      <section className="py-24 bg-gradient-to-b from-green-900 to-red-950 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Snowflake className="w-6 h-6 text-amber-400" />
-            <Snowflake className="w-6 h-6 text-amber-400" />
-            <Snowflake className="w-6 h-6 text-amber-400" />
-          </div>
-          <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
+      {/* FINAL CTA — ONE LINE, HARD */}
+      <section className="py-20 bg-gradient-to-b from-green-900 to-red-950 text-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-5xl font-black mb-8 leading-tight">
             Gather your family.<br />
             Capture the stories.<br />
             <span className="text-amber-400">Keep them forever.</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Christmas is when the generations come together. Make this the year you keep them together.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/book"
-              className="px-8 py-4 bg-red-700 hover:bg-red-800 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm shadow-lg shadow-red-900/50"
-            >
+            <Link href="/book" className="px-8 py-4 bg-red-700 hover:bg-red-800 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">
               Book Your Session
             </Link>
-            <Link
-              href="/keepsakes/voucher"
-              className="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm shadow-lg shadow-amber-900/50"
-            >
+            <Link href="/keepsakes/voucher" className="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">
               Buy a Gift Voucher
             </Link>
           </div>
