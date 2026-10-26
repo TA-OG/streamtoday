@@ -1,18 +1,59 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import { Navigation } from "@/components/sections/Navigation";
 import { Footer } from "@/components/sections/Footer";
 import { LeadMagnet } from "@/components/sections/LeadMagnet";
-import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
-
-export const metadata: Metadata = {
-  title: "Contact StreamToday Studios | Nottingham Podcast Studio",
-  description: "Get in touch with StreamToday Studios in Nottingham. Book a tour, request a quote, or ask about our podcast and video production services. 20 Fletcher Gate, Lace Market.",
-  alternates: {
-    canonical: "/contact",
-  },
-};
+import { MapPin, Phone, Mail, Clock, ArrowRight, Check } from "lucide-react";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: formData.email,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          phone: formData.phone || null,
+          notes: formData.message || null,
+          source: "contact_page",
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSubmitted(true);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <main className="min-h-screen">
       <Navigation />
@@ -97,78 +138,120 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="bg-gray-50 p-8 lg:p-12">
-              <h3 className="text-2xl font-bold mb-2">Send a message</h3>
-              <p className="text-gray-600 mb-8">
-                We&apos;ll get back to you within 24 hours.
-              </p>
+              {!submitted ? (
+                <>
+                  <h3 className="text-2xl font-bold mb-2">Send a message</h3>
+                  <p className="text-gray-600 mb-8">
+                    We&apos;ll get back to you within 24 hours.
+                  </p>
 
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium mb-2">
-                      First name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
-                      placeholder="John"
-                    />
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="firstName" className="block text-sm font-medium mb-2">
+                          First name
+                        </label>
+                        <input
+                          type="text"
+                          id="firstName"
+                          value={formData.firstName}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
+                          placeholder="John"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="lastName" className="block text-sm font-medium mb-2">
+                          Last name
+                        </label>
+                        <input
+                          type="text"
+                          id="lastName"
+                          value={formData.lastName}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
+                          placeholder="Smith"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium mb-2">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
+                        placeholder="john@company.com"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                        Phone (optional)
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
+                        placeholder="07123 456789"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium mb-2">
+                        Message
+                      </label>
+                      <textarea
+                        id="message"
+                        rows={4}
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white resize-none"
+                        placeholder="Tell us about your project..."
+                      />
+                    </div>
+
+                    {error && (
+                      <p className="text-red-600 text-sm">{error}</p>
+                    )}
+
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {loading ? (
+                        "Sending..."
+                      ) : (
+                        <>
+                          Send Message
+                          <ArrowRight className="ml-2" size={20} />
+                        </>
+                      )}
+                    </button>
+                  </form>
+                </>
+              ) : (
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Check className="w-8 h-8 text-green-600" />
                   </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium mb-2">
-                      Last name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
-                      placeholder="Smith"
-                    />
-                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Message sent!</h3>
+                  <p className="text-gray-600">
+                    We&apos;ll get back to you within 24 hours.
+                  </p>
                 </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
-                    placeholder="john@company.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                    Phone (optional)
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white"
-                    placeholder="07123 456789"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 focus:border-black focus:outline-none transition-colors bg-white resize-none"
-                    placeholder="Tell us about your project..."
-                  />
-                </div>
-
-                <button type="submit" className="w-full btn-primary">
-                  Send Message
-                  <ArrowRight className="ml-2" size={20} />
-                </button>
-              </form>
+              )}
             </div>
           </div>
         </div>

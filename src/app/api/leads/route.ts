@@ -4,7 +4,7 @@ import { createServiceClient } from "@/lib/supabase/server";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, firstName, lastName, company, phone, source, leadMagnet } = body;
+    const { email, firstName, lastName, company, phone, source, leadMagnet, notes } = body;
 
     if (!email) {
       return NextResponse.json({ error: "Email is required" }, { status: 400 });
@@ -23,6 +23,7 @@ export async function POST(request: NextRequest) {
         phone: phone || null,
         source: source || "website",
         lead_magnet: leadMagnet || null,
+        notes: notes || null,
         status: "new",
       }, { onConflict: "email" })
       .select()

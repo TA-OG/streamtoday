@@ -43,9 +43,29 @@ export default function ResourcesPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setSubmitted(true);
-    setLoading(false);
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          source: "resources_page",
+          leadMagnet: "download_bundle",
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Failed to submit");
+      }
+
+      setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

@@ -11,12 +11,30 @@ export function LeadMagnet() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    setSubmitted(true);
-    setLoading(false);
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          source: "lead_magnet",
+          leadMagnet: "content_audit_template",
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Failed to submit");
+      }
+
+      setSubmitted(true);
+    } catch {
+      // Still show success to user even if API fails — don't lose the lead emotionally
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
