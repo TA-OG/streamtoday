@@ -34,7 +34,7 @@ export default function KeepsakesPage() {
             Sit down together in our Nottingham studio and leave with a film you will watch every Christmas to come.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book" className="px-8 py-4 bg-red-700 hover:bg-red-800 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">
+            <Link href="/keepsakes/book" className="px-8 py-4 bg-red-700 hover:bg-red-800 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">
               Book Your Session
             </Link>
             <Link href="/keepsakes/voucher" className="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">
@@ -238,7 +238,7 @@ export default function KeepsakesPage() {
             <span className="text-amber-400">Keep them forever.</span>
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book" className="px-8 py-4 bg-red-700 hover:bg-red-800 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">
+            <Link href="/keepsakes/book" className="px-8 py-4 bg-red-700 hover:bg-red-800 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">
               Book Your Session
             </Link>
             <Link href="/keepsakes/voucher" className="px-8 py-4 bg-amber-600 hover:bg-amber-700 text-white font-black uppercase tracking-widest transition-all text-center rounded-sm">

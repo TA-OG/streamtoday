@@ -22,6 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/recruitment-agencies",
     "/tech-saas",
     "/keepsakes",
+    "/keepsakes/book",
     "/keepsakes/guide",
     "/keepsakes/voucher",
     "/keepsakes/referral",
