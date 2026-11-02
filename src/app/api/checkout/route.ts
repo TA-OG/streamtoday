@@ -18,7 +18,6 @@ export async function POST(request: NextRequest) {
     const isVoucher = priceKey.includes("voucher");
 
     const session = await getStripe().checkout.sessions.create({
-      payment_method_types: ["card"],
       line_items: [
         {
           price: priceId,
