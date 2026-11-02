@@ -54,8 +54,16 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ url: session.url }, { status: 200 });
   } catch (error) {
     console.error("Checkout error:", error);
+    const stripeError = error as { type?: string; param?: string; statusCode?: number };
+    const code = !process.env.STRIPE_STREAMTODAY_KEY
+      ? "STRIPE_NOT_CONFIGURED"
+      : stripeError.type === "StripeInvalidRequestError"
+        ? `STRIPE_INVALID_${stripeError.param || "REQUEST"}`
+        : stripeError.type === "StripeAuthenticationError"
+          ? "STRIPE_AUTH_FAILED"
+          : "CHECKOUT_UNAVAILABLE";
     return NextResponse.json(
-      { error: "Failed to create checkout session" },
+      { error: "Failed to create checkout session", code },
       { status: 500 }
     );
   }
